@@ -230,6 +230,8 @@ namespace client {
 
     std::vector<std::string> GetNamesOfAllObjects() const;
 
+    void ExportToGLTF(const std::string &filename) const;
+
   private:
 
     detail::EpisodeProxy _episode;

@@ -383,5 +383,10 @@ namespace client {
     }
   }
 
+  void World::ExportToGLTF(const std::string &filename) const {
+    std::cout << "Exporting GLTF to " << filename << std::endl;
+    //_episode.Lock()->ExportToGLTF(filename);
+  }
+
 } // namespace client
 } // namespace carla
