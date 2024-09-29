@@ -1,0 +1,6 @@
+{
+    "cmake.configureArgs": [
+        "-DLAUNCH_ARGS=\"-prefernvidia\"",
+        "-DENABLE_ROS2=ON"
+    ]
+}
