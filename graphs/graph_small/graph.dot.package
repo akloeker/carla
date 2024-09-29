@@ -1,0 +1,90 @@
+digraph "package" {
+node [
+  fontsize = "12"
+];
+    "node31" [ label = "package", shape = box ];
+    "node21" [ label = "carla-unreal-package", shape = box ];
+    "node31" -> "node21"  // package -> carla-unreal-package
+    "node10" [ label = "carla-python-api", shape = box ];
+    "node21" -> "node10"  // carla-unreal-package -> carla-python-api
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node10" -> "node1"  // carla-python-api -> Detour
+    "node4" [ label = "DetourCrowd\n(RecastNavigation::DetourCrowd)", shape = octagon ];
+    "node10" -> "node4"  // carla-python-api -> DetourCrowd
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node4" -> "node1"  // DetourCrowd -> Detour
+    "node3" [ label = "Recast\n(RecastNavigation::Recast)", shape = octagon ];
+    "node10" -> "node3"  // carla-python-api -> Recast
+    "node6" [ label = "carla-client", shape = octagon ];
+    "node10" -> "node6"  // carla-python-api -> carla-client
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node6" -> "node1"  // carla-client -> Detour
+    "node4" [ label = "DetourCrowd\n(RecastNavigation::DetourCrowd)", shape = octagon ];
+    "node6" -> "node4"  // carla-client -> DetourCrowd
+    "node3" [ label = "Recast\n(RecastNavigation::Recast)", shape = octagon ];
+    "node6" -> "node3"  // carla-client -> Recast
+    "node7" [ label = "rpc", shape = octagon ];
+    "node6" -> "node7"  // carla-client -> rpc
+    "node7" [ label = "rpc", shape = octagon ];
+    "node10" -> "node7"  // carla-python-api -> rpc
+    "node20" [ label = "carla-unreal-editor", shape = box ];
+    "node21" -> "node20"  // carla-unreal-package -> carla-unreal-editor
+    "node5" [ label = "RecastBuilder", shape = egg ];
+    "node20" -> "node5"  // carla-unreal-editor -> RecastBuilder
+    "node0" [ label = "DebugUtils\n(RecastNavigation::DebugUtils)", shape = octagon ];
+    "node5" -> "node0" [ style = dotted ] // RecastBuilder -> DebugUtils
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node0" -> "node1"  // DebugUtils -> Detour
+    "node2" [ label = "DetourTileCache\n(RecastNavigation::DetourTileCache)", shape = octagon ];
+    "node0" -> "node2"  // DebugUtils -> DetourTileCache
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node2" -> "node1"  // DetourTileCache -> Detour
+    "node3" [ label = "Recast\n(RecastNavigation::Recast)", shape = octagon ];
+    "node0" -> "node3"  // DebugUtils -> Recast
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node5" -> "node1" [ style = dotted ] // RecastBuilder -> Detour
+    "node4" [ label = "DetourCrowd\n(RecastNavigation::DetourCrowd)", shape = octagon ];
+    "node5" -> "node4" [ style = dotted ] // RecastBuilder -> DetourCrowd
+    "node2" [ label = "DetourTileCache\n(RecastNavigation::DetourTileCache)", shape = octagon ];
+    "node5" -> "node2" [ style = dotted ] // RecastBuilder -> DetourTileCache
+    "node3" [ label = "Recast\n(RecastNavigation::Recast)", shape = octagon ];
+    "node5" -> "node3" [ style = dotted ] // RecastBuilder -> Recast
+    "node6" [ label = "carla-client", shape = octagon ];
+    "node20" -> "node6"  // carla-unreal-editor -> carla-client
+    "node17" [ label = "carla-server", shape = octagon ];
+    "node20" -> "node17"  // carla-unreal-editor -> carla-server
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node17" -> "node1"  // carla-server -> Detour
+    "node4" [ label = "DetourCrowd\n(RecastNavigation::DetourCrowd)", shape = octagon ];
+    "node17" -> "node4"  // carla-server -> DetourCrowd
+    "node3" [ label = "Recast\n(RecastNavigation::Recast)", shape = octagon ];
+    "node17" -> "node3"  // carla-server -> Recast
+    "node12" [ label = "carla-ros2-native", shape = box ];
+    "node17" -> "node12"  // carla-server -> carla-ros2-native
+    "node13" [ label = "carla-ros2-native-lib", shape = box ];
+    "node12" -> "node13"  // carla-ros2-native -> carla-ros2-native-lib
+    "node14" [ label = "fastdds", shape = box ];
+    "node13" -> "node14"  // carla-ros2-native-lib -> fastdds
+    "node15" [ label = "fastcdr", shape = box ];
+    "node14" -> "node15"  // fastdds -> fastcdr
+    "node16" [ label = "foonathan_memory", shape = box ];
+    "node14" -> "node16"  // fastdds -> foonathan_memory
+    "node7" [ label = "rpc", shape = octagon ];
+    "node17" -> "node7"  // carla-server -> rpc
+    "node18" [ label = "carla-unreal", shape = box ];
+    "node20" -> "node18"  // carla-unreal-editor -> carla-unreal
+    "node5" [ label = "RecastBuilder", shape = egg ];
+    "node18" -> "node5"  // carla-unreal -> RecastBuilder
+    "node6" [ label = "carla-client", shape = octagon ];
+    "node18" -> "node6"  // carla-unreal -> carla-client
+    "node17" [ label = "carla-server", shape = octagon ];
+    "node18" -> "node17"  // carla-unreal -> carla-server
+    "node19" [ label = "carla-unreal-configure", shape = box ];
+    "node18" -> "node19"  // carla-unreal -> carla-unreal-configure
+    "node7" [ label = "rpc", shape = octagon ];
+    "node18" -> "node7"  // carla-unreal -> rpc
+    "node19" [ label = "carla-unreal-configure", shape = box ];
+    "node20" -> "node19"  // carla-unreal-editor -> carla-unreal-configure
+    "node7" [ label = "rpc", shape = octagon ];
+    "node20" -> "node7"  // carla-unreal-editor -> rpc
+}

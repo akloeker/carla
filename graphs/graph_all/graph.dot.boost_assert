@@ -1,0 +1,8 @@
+digraph "boost_assert" {
+node [
+  fontsize = "12"
+];
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node11" -> "node12" [ style = dashed ] // boost_assert -> boost_config
+}

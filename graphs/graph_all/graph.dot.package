@@ -1,0 +1,1618 @@
+digraph "package" {
+node [
+  fontsize = "12"
+];
+    "node152" [ label = "package", shape = box ];
+    "node139" [ label = "carla-unreal-package", shape = box ];
+    "node152" -> "node139"  // package -> carla-unreal-package
+    "node126" [ label = "carla-python-api", shape = box ];
+    "node139" -> "node126"  // carla-unreal-package -> carla-python-api
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node126" -> "node1"  // carla-python-api -> Detour
+    "node4" [ label = "DetourCrowd\n(RecastNavigation::DetourCrowd)", shape = octagon ];
+    "node126" -> "node4"  // carla-python-api -> DetourCrowd
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node4" -> "node1"  // DetourCrowd -> Detour
+    "node3" [ label = "Recast\n(RecastNavigation::Recast)", shape = octagon ];
+    "node126" -> "node3"  // carla-python-api -> Recast
+    "node46" [ label = "boost_asio\n(Boost::asio)", shape = pentagon ];
+    "node126" -> "node46"  // carla-python-api -> boost_asio
+    "node43" [ label = "boost_align\n(Boost::align)", shape = pentagon ];
+    "node46" -> "node43" [ style = dashed ] // boost_asio -> boost_align
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node43" -> "node11" [ style = dashed ] // boost_align -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node11" -> "node12" [ style = dashed ] // boost_assert -> boost_config
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node43" -> "node12" [ style = dashed ] // boost_align -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node43" -> "node13" [ style = dashed ] // boost_align -> boost_core
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node13" -> "node11" [ style = dashed ] // boost_core -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node13" -> "node12" [ style = dashed ] // boost_core -> boost_config
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node13" -> "node14" [ style = dashed ] // boost_core -> boost_static_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node14" -> "node12" [ style = dashed ] // boost_static_assert -> boost_config
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node13" -> "node15" [ style = dashed ] // boost_core -> boost_throw_exception
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node15" -> "node11" [ style = dashed ] // boost_throw_exception -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node15" -> "node12" [ style = dashed ] // boost_throw_exception -> boost_config
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node43" -> "node14" [ style = dashed ] // boost_align -> boost_static_assert
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node46" -> "node11" [ style = dashed ] // boost_asio -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node46" -> "node12" [ style = dashed ] // boost_asio -> boost_config
+    "node47" [ label = "boost_context\n(Boost::context)", shape = octagon ];
+    "node46" -> "node47" [ style = dashed ] // boost_asio -> boost_context
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node47" -> "node11"  // boost_context -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node47" -> "node12"  // boost_context -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node47" -> "node13"  // boost_context -> boost_core
+    "node35" [ label = "boost_mp11\n(Boost::mp11)", shape = pentagon ];
+    "node47" -> "node35"  // boost_context -> boost_mp11
+    "node48" [ label = "boost_pool\n(Boost::pool)", shape = pentagon ];
+    "node47" -> "node48"  // boost_context -> boost_pool
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node48" -> "node11" [ style = dashed ] // boost_pool -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node48" -> "node12" [ style = dashed ] // boost_pool -> boost_config
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node48" -> "node49" [ style = dashed ] // boost_pool -> boost_integer
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node49" -> "node11" [ style = dashed ] // boost_integer -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node49" -> "node12" [ style = dashed ] // boost_integer -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node49" -> "node13" [ style = dashed ] // boost_integer -> boost_core
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node49" -> "node14" [ style = dashed ] // boost_integer -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node49" -> "node15" [ style = dashed ] // boost_integer -> boost_throw_exception
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node48" -> "node15" [ style = dashed ] // boost_pool -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node48" -> "node19" [ style = dashed ] // boost_pool -> boost_type_traits
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node19" -> "node12" [ style = dashed ] // boost_type_traits -> boost_config
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node19" -> "node14" [ style = dashed ] // boost_type_traits -> boost_static_assert
+    "node50" [ label = "boost_winapi\n(Boost::winapi)", shape = pentagon ];
+    "node48" -> "node50" [ style = dashed ] // boost_pool -> boost_winapi
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node50" -> "node12" [ style = dashed ] // boost_winapi -> boost_config
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node50" -> "node29" [ style = dashed ] // boost_winapi -> boost_predef
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node47" -> "node29"  // boost_context -> boost_predef
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node47" -> "node21"  // boost_context -> boost_smart_ptr
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node21" -> "node11" [ style = dashed ] // boost_smart_ptr -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node21" -> "node12" [ style = dashed ] // boost_smart_ptr -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node21" -> "node13" [ style = dashed ] // boost_smart_ptr -> boost_core
+    "node22" [ label = "boost_move\n(Boost::move)", shape = pentagon ];
+    "node21" -> "node22" [ style = dashed ] // boost_smart_ptr -> boost_move
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node22" -> "node12" [ style = dashed ] // boost_move -> boost_config
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node21" -> "node14" [ style = dashed ] // boost_smart_ptr -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node21" -> "node15" [ style = dashed ] // boost_smart_ptr -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node21" -> "node19" [ style = dashed ] // boost_smart_ptr -> boost_type_traits
+    "node51" [ label = "boost_coroutine\n(Boost::coroutine)", shape = octagon ];
+    "node46" -> "node51" [ style = dashed ] // boost_asio -> boost_coroutine
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node51" -> "node11"  // boost_coroutine -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node51" -> "node12"  // boost_coroutine -> boost_config
+    "node47" [ label = "boost_context\n(Boost::context)", shape = octagon ];
+    "node51" -> "node47"  // boost_coroutine -> boost_context
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node51" -> "node13"  // boost_coroutine -> boost_core
+    "node20" [ label = "boost_exception\n(Boost::exception)", shape = octagon ];
+    "node51" -> "node20"  // boost_coroutine -> boost_exception
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node20" -> "node11"  // boost_exception -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node20" -> "node12"  // boost_exception -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node20" -> "node13"  // boost_exception -> boost_core
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node20" -> "node21"  // boost_exception -> boost_smart_ptr
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node20" -> "node15"  // boost_exception -> boost_throw_exception
+    "node23" [ label = "boost_tuple\n(Boost::tuple)", shape = pentagon ];
+    "node20" -> "node23"  // boost_exception -> boost_tuple
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node23" -> "node12" [ style = dashed ] // boost_tuple -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node23" -> "node13" [ style = dashed ] // boost_tuple -> boost_core
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node23" -> "node14" [ style = dashed ] // boost_tuple -> boost_static_assert
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node23" -> "node19" [ style = dashed ] // boost_tuple -> boost_type_traits
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node20" -> "node19"  // boost_exception -> boost_type_traits
+    "node22" [ label = "boost_move\n(Boost::move)", shape = pentagon ];
+    "node51" -> "node22"  // boost_coroutine -> boost_move
+    "node52" [ label = "boost_system\n(Boost::system)", shape = pentagon ];
+    "node51" -> "node52"  // boost_coroutine -> boost_system
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node52" -> "node11" [ style = dashed ] // boost_system -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node52" -> "node12" [ style = dashed ] // boost_system -> boost_config
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node52" -> "node15" [ style = dashed ] // boost_system -> boost_throw_exception
+    "node53" [ label = "boost_variant2\n(Boost::variant2)", shape = pentagon ];
+    "node52" -> "node53" [ style = dashed ] // boost_system -> boost_variant2
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node53" -> "node11" [ style = dashed ] // boost_variant2 -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node53" -> "node12" [ style = dashed ] // boost_variant2 -> boost_config
+    "node35" [ label = "boost_mp11\n(Boost::mp11)", shape = pentagon ];
+    "node53" -> "node35" [ style = dashed ] // boost_variant2 -> boost_mp11
+    "node50" [ label = "boost_winapi\n(Boost::winapi)", shape = pentagon ];
+    "node52" -> "node50" [ style = dashed ] // boost_system -> boost_winapi
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node51" -> "node15"  // boost_coroutine -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node51" -> "node19"  // boost_coroutine -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node51" -> "node30"  // boost_coroutine -> boost_utility
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node30" -> "node12" [ style = dashed ] // boost_utility -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node30" -> "node13" [ style = dashed ] // boost_utility -> boost_core
+    "node31" [ label = "boost_io\n(Boost::io)", shape = pentagon ];
+    "node30" -> "node31" [ style = dashed ] // boost_utility -> boost_io
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node31" -> "node12" [ style = dashed ] // boost_io -> boost_config
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node30" -> "node18" [ style = dashed ] // boost_utility -> boost_preprocessor
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node30" -> "node14" [ style = dashed ] // boost_utility -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node30" -> "node15" [ style = dashed ] // boost_utility -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node30" -> "node19" [ style = dashed ] // boost_utility -> boost_type_traits
+    "node54" [ label = "boost_date_time\n(Boost::date_time)", shape = octagon ];
+    "node46" -> "node54" [ style = dashed ] // boost_asio -> boost_date_time
+    "node9" [ label = "boost_algorithm\n(Boost::algorithm)", shape = pentagon ];
+    "node54" -> "node9"  // boost_date_time -> boost_algorithm
+    "node10" [ label = "boost_array\n(Boost::array)", shape = pentagon ];
+    "node9" -> "node10" [ style = dashed ] // boost_algorithm -> boost_array
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node10" -> "node11" [ style = dashed ] // boost_array -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node10" -> "node12" [ style = dashed ] // boost_array -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node10" -> "node13" [ style = dashed ] // boost_array -> boost_core
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node10" -> "node14" [ style = dashed ] // boost_array -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node10" -> "node15" [ style = dashed ] // boost_array -> boost_throw_exception
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node9" -> "node11" [ style = dashed ] // boost_algorithm -> boost_assert
+    "node16" [ label = "boost_bind\n(Boost::bind)", shape = pentagon ];
+    "node9" -> "node16" [ style = dashed ] // boost_algorithm -> boost_bind
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node16" -> "node12" [ style = dashed ] // boost_bind -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node16" -> "node13" [ style = dashed ] // boost_bind -> boost_core
+    "node17" [ label = "boost_concept_check\n(Boost::concept_check)", shape = pentagon ];
+    "node9" -> "node17" [ style = dashed ] // boost_algorithm -> boost_concept_check
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node17" -> "node12" [ style = dashed ] // boost_concept_check -> boost_config
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node17" -> "node18" [ style = dashed ] // boost_concept_check -> boost_preprocessor
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node17" -> "node14" [ style = dashed ] // boost_concept_check -> boost_static_assert
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node17" -> "node19" [ style = dashed ] // boost_concept_check -> boost_type_traits
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node9" -> "node12" [ style = dashed ] // boost_algorithm -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node9" -> "node13" [ style = dashed ] // boost_algorithm -> boost_core
+    "node20" [ label = "boost_exception\n(Boost::exception)", shape = octagon ];
+    "node9" -> "node20" [ style = dashed ] // boost_algorithm -> boost_exception
+    "node24" [ label = "boost_function\n(Boost::function)", shape = pentagon ];
+    "node9" -> "node24" [ style = dashed ] // boost_algorithm -> boost_function
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node24" -> "node11" [ style = dashed ] // boost_function -> boost_assert
+    "node16" [ label = "boost_bind\n(Boost::bind)", shape = pentagon ];
+    "node24" -> "node16" [ style = dashed ] // boost_function -> boost_bind
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node24" -> "node12" [ style = dashed ] // boost_function -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node24" -> "node13" [ style = dashed ] // boost_function -> boost_core
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node24" -> "node18" [ style = dashed ] // boost_function -> boost_preprocessor
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node24" -> "node15" [ style = dashed ] // boost_function -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node24" -> "node19" [ style = dashed ] // boost_function -> boost_type_traits
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node9" -> "node25" [ style = dashed ] // boost_algorithm -> boost_iterator
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node25" -> "node11" [ style = dashed ] // boost_iterator -> boost_assert
+    "node17" [ label = "boost_concept_check\n(Boost::concept_check)", shape = pentagon ];
+    "node25" -> "node17" [ style = dashed ] // boost_iterator -> boost_concept_check
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node25" -> "node12" [ style = dashed ] // boost_iterator -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node25" -> "node13" [ style = dashed ] // boost_iterator -> boost_core
+    "node26" [ label = "boost_detail\n(Boost::detail)", shape = pentagon ];
+    "node25" -> "node26" [ style = dashed ] // boost_iterator -> boost_detail
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node26" -> "node12" [ style = dashed ] // boost_detail -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node26" -> "node13" [ style = dashed ] // boost_detail -> boost_core
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node26" -> "node18" [ style = dashed ] // boost_detail -> boost_preprocessor
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node26" -> "node14" [ style = dashed ] // boost_detail -> boost_static_assert
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node26" -> "node19" [ style = dashed ] // boost_detail -> boost_type_traits
+    "node27" [ label = "boost_function_types\n(Boost::function_types)", shape = pentagon ];
+    "node25" -> "node27" [ style = dashed ] // boost_iterator -> boost_function_types
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node27" -> "node12" [ style = dashed ] // boost_function_types -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node27" -> "node13" [ style = dashed ] // boost_function_types -> boost_core
+    "node26" [ label = "boost_detail\n(Boost::detail)", shape = pentagon ];
+    "node27" -> "node26" [ style = dashed ] // boost_function_types -> boost_detail
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node27" -> "node28" [ style = dashed ] // boost_function_types -> boost_mpl
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node28" -> "node12" [ style = dashed ] // boost_mpl -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node28" -> "node13" [ style = dashed ] // boost_mpl -> boost_core
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node28" -> "node29" [ style = dashed ] // boost_mpl -> boost_predef
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node28" -> "node18" [ style = dashed ] // boost_mpl -> boost_preprocessor
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node28" -> "node14" [ style = dashed ] // boost_mpl -> boost_static_assert
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node28" -> "node19" [ style = dashed ] // boost_mpl -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node28" -> "node30" [ style = dashed ] // boost_mpl -> boost_utility
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node27" -> "node18" [ style = dashed ] // boost_function_types -> boost_preprocessor
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node27" -> "node19" [ style = dashed ] // boost_function_types -> boost_type_traits
+    "node32" [ label = "boost_fusion\n(Boost::fusion)", shape = pentagon ];
+    "node25" -> "node32" [ style = dashed ] // boost_iterator -> boost_fusion
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node32" -> "node12" [ style = dashed ] // boost_fusion -> boost_config
+    "node33" [ label = "boost_container_hash\n(Boost::container_hash)", shape = pentagon ];
+    "node32" -> "node33" [ style = dashed ] // boost_fusion -> boost_container_hash
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node33" -> "node12" [ style = dashed ] // boost_container_hash -> boost_config
+    "node34" [ label = "boost_describe\n(Boost::describe)", shape = pentagon ];
+    "node33" -> "node34" [ style = dashed ] // boost_container_hash -> boost_describe
+    "node35" [ label = "boost_mp11\n(Boost::mp11)", shape = pentagon ];
+    "node34" -> "node35" [ style = dashed ] // boost_describe -> boost_mp11
+    "node35" [ label = "boost_mp11\n(Boost::mp11)", shape = pentagon ];
+    "node33" -> "node35" [ style = dashed ] // boost_container_hash -> boost_mp11
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node32" -> "node13" [ style = dashed ] // boost_fusion -> boost_core
+    "node34" [ label = "boost_describe\n(Boost::describe)", shape = pentagon ];
+    "node32" -> "node34" [ style = dashed ] // boost_fusion -> boost_describe
+    "node27" [ label = "boost_function_types\n(Boost::function_types)", shape = pentagon ];
+    "node32" -> "node27" [ style = dashed ] // boost_fusion -> boost_function_types
+    "node36" [ label = "boost_functional\n(Boost::functional)", shape = pentagon ];
+    "node32" -> "node36" [ style = dashed ] // boost_fusion -> boost_functional
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node36" -> "node12" [ style = dashed ] // boost_functional -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node36" -> "node13" [ style = dashed ] // boost_functional -> boost_core
+    "node24" [ label = "boost_function\n(Boost::function)", shape = pentagon ];
+    "node36" -> "node24" [ style = dashed ] // boost_functional -> boost_function
+    "node27" [ label = "boost_function_types\n(Boost::function_types)", shape = pentagon ];
+    "node36" -> "node27" [ style = dashed ] // boost_functional -> boost_function_types
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node36" -> "node28" [ style = dashed ] // boost_functional -> boost_mpl
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node36" -> "node18" [ style = dashed ] // boost_functional -> boost_preprocessor
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node36" -> "node19" [ style = dashed ] // boost_functional -> boost_type_traits
+    "node37" [ label = "boost_typeof\n(Boost::typeof)", shape = pentagon ];
+    "node36" -> "node37" [ style = dashed ] // boost_functional -> boost_typeof
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node37" -> "node12" [ style = dashed ] // boost_typeof -> boost_config
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node36" -> "node30" [ style = dashed ] // boost_functional -> boost_utility
+    "node35" [ label = "boost_mp11\n(Boost::mp11)", shape = pentagon ];
+    "node32" -> "node35" [ style = dashed ] // boost_fusion -> boost_mp11
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node32" -> "node28" [ style = dashed ] // boost_fusion -> boost_mpl
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node32" -> "node18" [ style = dashed ] // boost_fusion -> boost_preprocessor
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node32" -> "node14" [ style = dashed ] // boost_fusion -> boost_static_assert
+    "node23" [ label = "boost_tuple\n(Boost::tuple)", shape = pentagon ];
+    "node32" -> "node23" [ style = dashed ] // boost_fusion -> boost_tuple
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node32" -> "node19" [ style = dashed ] // boost_fusion -> boost_type_traits
+    "node37" [ label = "boost_typeof\n(Boost::typeof)", shape = pentagon ];
+    "node32" -> "node37" [ style = dashed ] // boost_fusion -> boost_typeof
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node32" -> "node30" [ style = dashed ] // boost_fusion -> boost_utility
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node25" -> "node28" [ style = dashed ] // boost_iterator -> boost_mpl
+    "node38" [ label = "boost_optional\n(Boost::optional)", shape = pentagon ];
+    "node25" -> "node38" [ style = dashed ] // boost_iterator -> boost_optional
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node38" -> "node11" [ style = dashed ] // boost_optional -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node38" -> "node12" [ style = dashed ] // boost_optional -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node38" -> "node13" [ style = dashed ] // boost_optional -> boost_core
+    "node26" [ label = "boost_detail\n(Boost::detail)", shape = pentagon ];
+    "node38" -> "node26" [ style = dashed ] // boost_optional -> boost_detail
+    "node22" [ label = "boost_move\n(Boost::move)", shape = pentagon ];
+    "node38" -> "node22" [ style = dashed ] // boost_optional -> boost_move
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node38" -> "node29" [ style = dashed ] // boost_optional -> boost_predef
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node38" -> "node14" [ style = dashed ] // boost_optional -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node38" -> "node15" [ style = dashed ] // boost_optional -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node38" -> "node19" [ style = dashed ] // boost_optional -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node38" -> "node30" [ style = dashed ] // boost_optional -> boost_utility
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node25" -> "node21" [ style = dashed ] // boost_iterator -> boost_smart_ptr
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node25" -> "node14" [ style = dashed ] // boost_iterator -> boost_static_assert
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node25" -> "node19" [ style = dashed ] // boost_iterator -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node25" -> "node30" [ style = dashed ] // boost_iterator -> boost_utility
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node9" -> "node28" [ style = dashed ] // boost_algorithm -> boost_mpl
+    "node39" [ label = "boost_range\n(Boost::range)", shape = pentagon ];
+    "node9" -> "node39" [ style = dashed ] // boost_algorithm -> boost_range
+    "node10" [ label = "boost_array\n(Boost::array)", shape = pentagon ];
+    "node39" -> "node10" [ style = dashed ] // boost_range -> boost_array
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node39" -> "node11" [ style = dashed ] // boost_range -> boost_assert
+    "node17" [ label = "boost_concept_check\n(Boost::concept_check)", shape = pentagon ];
+    "node39" -> "node17" [ style = dashed ] // boost_range -> boost_concept_check
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node39" -> "node12" [ style = dashed ] // boost_range -> boost_config
+    "node33" [ label = "boost_container_hash\n(Boost::container_hash)", shape = pentagon ];
+    "node39" -> "node33" [ style = dashed ] // boost_range -> boost_container_hash
+    "node40" [ label = "boost_conversion\n(Boost::conversion)", shape = pentagon ];
+    "node39" -> "node40" [ style = dashed ] // boost_range -> boost_conversion
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node40" -> "node11" [ style = dashed ] // boost_conversion -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node40" -> "node12" [ style = dashed ] // boost_conversion -> boost_config
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node40" -> "node21" [ style = dashed ] // boost_conversion -> boost_smart_ptr
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node40" -> "node15" [ style = dashed ] // boost_conversion -> boost_throw_exception
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node39" -> "node13" [ style = dashed ] // boost_range -> boost_core
+    "node26" [ label = "boost_detail\n(Boost::detail)", shape = pentagon ];
+    "node39" -> "node26" [ style = dashed ] // boost_range -> boost_detail
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node39" -> "node25" [ style = dashed ] // boost_range -> boost_iterator
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node39" -> "node28" [ style = dashed ] // boost_range -> boost_mpl
+    "node38" [ label = "boost_optional\n(Boost::optional)", shape = pentagon ];
+    "node39" -> "node38" [ style = dashed ] // boost_range -> boost_optional
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node39" -> "node18" [ style = dashed ] // boost_range -> boost_preprocessor
+    "node41" [ label = "boost_regex\n(Boost::regex)", shape = pentagon ];
+    "node39" -> "node41" [ style = dashed ] // boost_range -> boost_regex
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node41" -> "node11" [ style = dashed ] // boost_regex -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node41" -> "node12" [ style = dashed ] // boost_regex -> boost_config
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node41" -> "node29" [ style = dashed ] // boost_regex -> boost_predef
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node41" -> "node15" [ style = dashed ] // boost_regex -> boost_throw_exception
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node39" -> "node14" [ style = dashed ] // boost_range -> boost_static_assert
+    "node23" [ label = "boost_tuple\n(Boost::tuple)", shape = pentagon ];
+    "node39" -> "node23" [ style = dashed ] // boost_range -> boost_tuple
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node39" -> "node19" [ style = dashed ] // boost_range -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node39" -> "node30" [ style = dashed ] // boost_range -> boost_utility
+    "node41" [ label = "boost_regex\n(Boost::regex)", shape = pentagon ];
+    "node9" -> "node41" [ style = dashed ] // boost_algorithm -> boost_regex
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node9" -> "node14" [ style = dashed ] // boost_algorithm -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node9" -> "node15" [ style = dashed ] // boost_algorithm -> boost_throw_exception
+    "node23" [ label = "boost_tuple\n(Boost::tuple)", shape = pentagon ];
+    "node9" -> "node23" [ style = dashed ] // boost_algorithm -> boost_tuple
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node9" -> "node19" [ style = dashed ] // boost_algorithm -> boost_type_traits
+    "node42" [ label = "boost_unordered\n(Boost::unordered)", shape = pentagon ];
+    "node9" -> "node42" [ style = dashed ] // boost_algorithm -> boost_unordered
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node42" -> "node11" [ style = dashed ] // boost_unordered -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node42" -> "node12" [ style = dashed ] // boost_unordered -> boost_config
+    "node33" [ label = "boost_container_hash\n(Boost::container_hash)", shape = pentagon ];
+    "node42" -> "node33" [ style = dashed ] // boost_unordered -> boost_container_hash
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node42" -> "node13" [ style = dashed ] // boost_unordered -> boost_core
+    "node35" [ label = "boost_mp11\n(Boost::mp11)", shape = pentagon ];
+    "node42" -> "node35" [ style = dashed ] // boost_unordered -> boost_mp11
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node42" -> "node29" [ style = dashed ] // boost_unordered -> boost_predef
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node42" -> "node15" [ style = dashed ] // boost_unordered -> boost_throw_exception
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node54" -> "node11"  // boost_date_time -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node54" -> "node12"  // boost_date_time -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node54" -> "node13"  // boost_date_time -> boost_core
+    "node31" [ label = "boost_io\n(Boost::io)", shape = pentagon ];
+    "node54" -> "node31"  // boost_date_time -> boost_io
+    "node55" [ label = "boost_lexical_cast\n(Boost::lexical_cast)", shape = pentagon ];
+    "node54" -> "node55"  // boost_date_time -> boost_lexical_cast
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node55" -> "node12" [ style = dashed ] // boost_lexical_cast -> boost_config
+    "node56" [ label = "boost_container\n(Boost::container)", shape = octagon ];
+    "node55" -> "node56" [ style = dashed ] // boost_lexical_cast -> boost_container
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node56" -> "node11"  // boost_container -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node56" -> "node12"  // boost_container -> boost_config
+    "node57" [ label = "boost_intrusive\n(Boost::intrusive)", shape = pentagon ];
+    "node56" -> "node57"  // boost_container -> boost_intrusive
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node57" -> "node11" [ style = dashed ] // boost_intrusive -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node57" -> "node12" [ style = dashed ] // boost_intrusive -> boost_config
+    "node33" [ label = "boost_container_hash\n(Boost::container_hash)", shape = pentagon ];
+    "node57" -> "node33" [ style = dashed ] // boost_intrusive -> boost_container_hash
+    "node22" [ label = "boost_move\n(Boost::move)", shape = pentagon ];
+    "node57" -> "node22" [ style = dashed ] // boost_intrusive -> boost_move
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node57" -> "node14" [ style = dashed ] // boost_intrusive -> boost_static_assert
+    "node22" [ label = "boost_move\n(Boost::move)", shape = pentagon ];
+    "node56" -> "node22"  // boost_container -> boost_move
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node56" -> "node14"  // boost_container -> boost_static_assert
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node55" -> "node13" [ style = dashed ] // boost_lexical_cast -> boost_core
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node55" -> "node49" [ style = dashed ] // boost_lexical_cast -> boost_integer
+    "node58" [ label = "boost_numeric_conversion\n(Boost::numeric_conversion)", shape = pentagon ];
+    "node55" -> "node58" [ style = dashed ] // boost_lexical_cast -> boost_numeric_conversion
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node58" -> "node12" [ style = dashed ] // boost_numeric_conversion -> boost_config
+    "node40" [ label = "boost_conversion\n(Boost::conversion)", shape = pentagon ];
+    "node58" -> "node40" [ style = dashed ] // boost_numeric_conversion -> boost_conversion
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node58" -> "node13" [ style = dashed ] // boost_numeric_conversion -> boost_core
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node58" -> "node28" [ style = dashed ] // boost_numeric_conversion -> boost_mpl
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node58" -> "node18" [ style = dashed ] // boost_numeric_conversion -> boost_preprocessor
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node58" -> "node15" [ style = dashed ] // boost_numeric_conversion -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node58" -> "node19" [ style = dashed ] // boost_numeric_conversion -> boost_type_traits
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node55" -> "node15" [ style = dashed ] // boost_lexical_cast -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node55" -> "node19" [ style = dashed ] // boost_lexical_cast -> boost_type_traits
+    "node58" [ label = "boost_numeric_conversion\n(Boost::numeric_conversion)", shape = pentagon ];
+    "node54" -> "node58"  // boost_date_time -> boost_numeric_conversion
+    "node39" [ label = "boost_range\n(Boost::range)", shape = pentagon ];
+    "node54" -> "node39"  // boost_date_time -> boost_range
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node54" -> "node21"  // boost_date_time -> boost_smart_ptr
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node54" -> "node14"  // boost_date_time -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node54" -> "node15"  // boost_date_time -> boost_throw_exception
+    "node59" [ label = "boost_tokenizer\n(Boost::tokenizer)", shape = pentagon ];
+    "node54" -> "node59"  // boost_date_time -> boost_tokenizer
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node59" -> "node11" [ style = dashed ] // boost_tokenizer -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node59" -> "node12" [ style = dashed ] // boost_tokenizer -> boost_config
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node59" -> "node25" [ style = dashed ] // boost_tokenizer -> boost_iterator
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node59" -> "node28" [ style = dashed ] // boost_tokenizer -> boost_mpl
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node59" -> "node15" [ style = dashed ] // boost_tokenizer -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node59" -> "node19" [ style = dashed ] // boost_tokenizer -> boost_type_traits
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node54" -> "node19"  // boost_date_time -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node54" -> "node30"  // boost_date_time -> boost_utility
+    "node50" [ label = "boost_winapi\n(Boost::winapi)", shape = pentagon ];
+    "node54" -> "node50"  // boost_date_time -> boost_winapi
+    "node52" [ label = "boost_system\n(Boost::system)", shape = pentagon ];
+    "node46" -> "node52" [ style = dashed ] // boost_asio -> boost_system
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node46" -> "node15" [ style = dashed ] // boost_asio -> boost_throw_exception
+    "node71" [ label = "boost_geometry\n(Boost::geometry)", shape = pentagon ];
+    "node126" -> "node71"  // carla-python-api -> boost_geometry
+    "node9" [ label = "boost_algorithm\n(Boost::algorithm)", shape = pentagon ];
+    "node71" -> "node9" [ style = dashed ] // boost_geometry -> boost_algorithm
+    "node44" [ label = "boost_any\n(Boost::any)", shape = pentagon ];
+    "node71" -> "node44" [ style = dashed ] // boost_geometry -> boost_any
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node44" -> "node12" [ style = dashed ] // boost_any -> boost_config
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node44" -> "node15" [ style = dashed ] // boost_any -> boost_throw_exception
+    "node45" [ label = "boost_type_index\n(Boost::type_index)", shape = pentagon ];
+    "node44" -> "node45" [ style = dashed ] // boost_any -> boost_type_index
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node45" -> "node12" [ style = dashed ] // boost_type_index -> boost_config
+    "node33" [ label = "boost_container_hash\n(Boost::container_hash)", shape = pentagon ];
+    "node45" -> "node33" [ style = dashed ] // boost_type_index -> boost_container_hash
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node45" -> "node13" [ style = dashed ] // boost_type_index -> boost_core
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node45" -> "node15" [ style = dashed ] // boost_type_index -> boost_throw_exception
+    "node10" [ label = "boost_array\n(Boost::array)", shape = pentagon ];
+    "node71" -> "node10" [ style = dashed ] // boost_geometry -> boost_array
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node71" -> "node11" [ style = dashed ] // boost_geometry -> boost_assert
+    "node17" [ label = "boost_concept_check\n(Boost::concept_check)", shape = pentagon ];
+    "node71" -> "node17" [ style = dashed ] // boost_geometry -> boost_concept_check
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node71" -> "node12" [ style = dashed ] // boost_geometry -> boost_config
+    "node56" [ label = "boost_container\n(Boost::container)", shape = octagon ];
+    "node71" -> "node56" [ style = dashed ] // boost_geometry -> boost_container
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node71" -> "node13" [ style = dashed ] // boost_geometry -> boost_core
+    "node68" [ label = "boost_endian\n(Boost::endian)", shape = pentagon ];
+    "node71" -> "node68" [ style = dashed ] // boost_geometry -> boost_endian
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node68" -> "node12" [ style = dashed ] // boost_endian -> boost_config
+    "node27" [ label = "boost_function_types\n(Boost::function_types)", shape = pentagon ];
+    "node71" -> "node27" [ style = dashed ] // boost_geometry -> boost_function_types
+    "node32" [ label = "boost_fusion\n(Boost::fusion)", shape = pentagon ];
+    "node71" -> "node32" [ style = dashed ] // boost_geometry -> boost_fusion
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node71" -> "node49" [ style = dashed ] // boost_geometry -> boost_integer
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node71" -> "node25" [ style = dashed ] // boost_geometry -> boost_iterator
+    "node55" [ label = "boost_lexical_cast\n(Boost::lexical_cast)", shape = pentagon ];
+    "node71" -> "node55" [ style = dashed ] // boost_geometry -> boost_lexical_cast
+    "node72" [ label = "boost_math\n(Boost::math)", shape = pentagon ];
+    "node71" -> "node72" [ style = dashed ] // boost_geometry -> boost_math
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node72" -> "node11" [ style = dashed ] // boost_math -> boost_assert
+    "node17" [ label = "boost_concept_check\n(Boost::concept_check)", shape = pentagon ];
+    "node72" -> "node17" [ style = dashed ] // boost_math -> boost_concept_check
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node72" -> "node12" [ style = dashed ] // boost_math -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node72" -> "node13" [ style = dashed ] // boost_math -> boost_core
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node72" -> "node49" [ style = dashed ] // boost_math -> boost_integer
+    "node55" [ label = "boost_lexical_cast\n(Boost::lexical_cast)", shape = pentagon ];
+    "node72" -> "node55" [ style = dashed ] // boost_math -> boost_lexical_cast
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node72" -> "node29" [ style = dashed ] // boost_math -> boost_predef
+    "node73" [ label = "boost_random\n(Boost::random)", shape = octagon ];
+    "node72" -> "node73" [ style = dashed ] // boost_math -> boost_random
+    "node10" [ label = "boost_array\n(Boost::array)", shape = pentagon ];
+    "node73" -> "node10"  // boost_random -> boost_array
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node73" -> "node11"  // boost_random -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node73" -> "node12"  // boost_random -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node73" -> "node13"  // boost_random -> boost_core
+    "node67" [ label = "boost_dynamic_bitset\n(Boost::dynamic_bitset)", shape = pentagon ];
+    "node73" -> "node67"  // boost_random -> boost_dynamic_bitset
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node67" -> "node11" [ style = dashed ] // boost_dynamic_bitset -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node67" -> "node12" [ style = dashed ] // boost_dynamic_bitset -> boost_config
+    "node33" [ label = "boost_container_hash\n(Boost::container_hash)", shape = pentagon ];
+    "node67" -> "node33" [ style = dashed ] // boost_dynamic_bitset -> boost_container_hash
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node67" -> "node13" [ style = dashed ] // boost_dynamic_bitset -> boost_core
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node67" -> "node49" [ style = dashed ] // boost_dynamic_bitset -> boost_integer
+    "node22" [ label = "boost_move\n(Boost::move)", shape = pentagon ];
+    "node67" -> "node22" [ style = dashed ] // boost_dynamic_bitset -> boost_move
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node67" -> "node14" [ style = dashed ] // boost_dynamic_bitset -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node67" -> "node15" [ style = dashed ] // boost_dynamic_bitset -> boost_throw_exception
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node73" -> "node49"  // boost_random -> boost_integer
+    "node31" [ label = "boost_io\n(Boost::io)", shape = pentagon ];
+    "node73" -> "node31"  // boost_random -> boost_io
+    "node39" [ label = "boost_range\n(Boost::range)", shape = pentagon ];
+    "node73" -> "node39"  // boost_random -> boost_range
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node73" -> "node14"  // boost_random -> boost_static_assert
+    "node52" [ label = "boost_system\n(Boost::system)", shape = pentagon ];
+    "node73" -> "node52"  // boost_random -> boost_system
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node73" -> "node15"  // boost_random -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node73" -> "node19"  // boost_random -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node73" -> "node30"  // boost_random -> boost_utility
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node72" -> "node14" [ style = dashed ] // boost_math -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node72" -> "node15" [ style = dashed ] // boost_math -> boost_throw_exception
+    "node22" [ label = "boost_move\n(Boost::move)", shape = pentagon ];
+    "node71" -> "node22" [ style = dashed ] // boost_geometry -> boost_move
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node71" -> "node28" [ style = dashed ] // boost_geometry -> boost_mpl
+    "node74" [ label = "boost_multiprecision\n(Boost::multiprecision)", shape = pentagon ];
+    "node71" -> "node74" [ style = dashed ] // boost_geometry -> boost_multiprecision
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node74" -> "node11" [ style = dashed ] // boost_multiprecision -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node74" -> "node12" [ style = dashed ] // boost_multiprecision -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node74" -> "node13" [ style = dashed ] // boost_multiprecision -> boost_core
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node74" -> "node49" [ style = dashed ] // boost_multiprecision -> boost_integer
+    "node55" [ label = "boost_lexical_cast\n(Boost::lexical_cast)", shape = pentagon ];
+    "node74" -> "node55" [ style = dashed ] // boost_multiprecision -> boost_lexical_cast
+    "node72" [ label = "boost_math\n(Boost::math)", shape = pentagon ];
+    "node74" -> "node72" [ style = dashed ] // boost_multiprecision -> boost_math
+    "node73" [ label = "boost_random\n(Boost::random)", shape = octagon ];
+    "node74" -> "node73" [ style = dashed ] // boost_multiprecision -> boost_random
+    "node58" [ label = "boost_numeric_conversion\n(Boost::numeric_conversion)", shape = pentagon ];
+    "node71" -> "node58" [ style = dashed ] // boost_geometry -> boost_numeric_conversion
+    "node75" [ label = "boost_polygon\n(Boost::polygon)", shape = pentagon ];
+    "node71" -> "node75" [ style = dashed ] // boost_geometry -> boost_polygon
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node75" -> "node12" [ style = dashed ] // boost_polygon -> boost_config
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node71" -> "node29" [ style = dashed ] // boost_geometry -> boost_predef
+    "node76" [ label = "boost_qvm\n(Boost::qvm)", shape = pentagon ];
+    "node71" -> "node76" [ style = dashed ] // boost_geometry -> boost_qvm
+    "node39" [ label = "boost_range\n(Boost::range)", shape = pentagon ];
+    "node71" -> "node39" [ style = dashed ] // boost_geometry -> boost_range
+    "node77" [ label = "boost_rational\n(Boost::rational)", shape = pentagon ];
+    "node71" -> "node77" [ style = dashed ] // boost_geometry -> boost_rational
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node77" -> "node11" [ style = dashed ] // boost_rational -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node77" -> "node12" [ style = dashed ] // boost_rational -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node77" -> "node13" [ style = dashed ] // boost_rational -> boost_core
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node77" -> "node49" [ style = dashed ] // boost_rational -> boost_integer
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node77" -> "node14" [ style = dashed ] // boost_rational -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node77" -> "node15" [ style = dashed ] // boost_rational -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node77" -> "node19" [ style = dashed ] // boost_rational -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node77" -> "node30" [ style = dashed ] // boost_rational -> boost_utility
+    "node78" [ label = "boost_serialization\n(Boost::serialization)", shape = octagon ];
+    "node71" -> "node78" [ style = dashed ] // boost_geometry -> boost_serialization
+    "node10" [ label = "boost_array\n(Boost::array)", shape = pentagon ];
+    "node78" -> "node10"  // boost_serialization -> boost_array
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node78" -> "node11"  // boost_serialization -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node78" -> "node12"  // boost_serialization -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node78" -> "node13"  // boost_serialization -> boost_core
+    "node26" [ label = "boost_detail\n(Boost::detail)", shape = pentagon ];
+    "node78" -> "node26"  // boost_serialization -> boost_detail
+    "node24" [ label = "boost_function\n(Boost::function)", shape = pentagon ];
+    "node78" -> "node24" [ style = dotted ] // boost_serialization -> boost_function
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node78" -> "node49"  // boost_serialization -> boost_integer
+    "node31" [ label = "boost_io\n(Boost::io)", shape = pentagon ];
+    "node78" -> "node31"  // boost_serialization -> boost_io
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node78" -> "node25"  // boost_serialization -> boost_iterator
+    "node22" [ label = "boost_move\n(Boost::move)", shape = pentagon ];
+    "node78" -> "node22"  // boost_serialization -> boost_move
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node78" -> "node28"  // boost_serialization -> boost_mpl
+    "node38" [ label = "boost_optional\n(Boost::optional)", shape = pentagon ];
+    "node78" -> "node38"  // boost_serialization -> boost_optional
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node78" -> "node29"  // boost_serialization -> boost_predef
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node78" -> "node18"  // boost_serialization -> boost_preprocessor
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node78" -> "node21"  // boost_serialization -> boost_smart_ptr
+    "node79" [ label = "boost_spirit\n(Boost::spirit)", shape = pentagon ];
+    "node78" -> "node79"  // boost_serialization -> boost_spirit
+    "node10" [ label = "boost_array\n(Boost::array)", shape = pentagon ];
+    "node79" -> "node10" [ style = dashed ] // boost_spirit -> boost_array
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node79" -> "node11" [ style = dashed ] // boost_spirit -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node79" -> "node12" [ style = dashed ] // boost_spirit -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node79" -> "node13" [ style = dashed ] // boost_spirit -> boost_core
+    "node68" [ label = "boost_endian\n(Boost::endian)", shape = pentagon ];
+    "node79" -> "node68" [ style = dashed ] // boost_spirit -> boost_endian
+    "node24" [ label = "boost_function\n(Boost::function)", shape = pentagon ];
+    "node79" -> "node24" [ style = dashed ] // boost_spirit -> boost_function
+    "node27" [ label = "boost_function_types\n(Boost::function_types)", shape = pentagon ];
+    "node79" -> "node27" [ style = dashed ] // boost_spirit -> boost_function_types
+    "node32" [ label = "boost_fusion\n(Boost::fusion)", shape = pentagon ];
+    "node79" -> "node32" [ style = dashed ] // boost_spirit -> boost_fusion
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node79" -> "node49" [ style = dashed ] // boost_spirit -> boost_integer
+    "node31" [ label = "boost_io\n(Boost::io)", shape = pentagon ];
+    "node79" -> "node31" [ style = dashed ] // boost_spirit -> boost_io
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node79" -> "node25" [ style = dashed ] // boost_spirit -> boost_iterator
+    "node22" [ label = "boost_move\n(Boost::move)", shape = pentagon ];
+    "node79" -> "node22" [ style = dashed ] // boost_spirit -> boost_move
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node79" -> "node28" [ style = dashed ] // boost_spirit -> boost_mpl
+    "node38" [ label = "boost_optional\n(Boost::optional)", shape = pentagon ];
+    "node79" -> "node38" [ style = dashed ] // boost_spirit -> boost_optional
+    "node80" [ label = "boost_phoenix\n(Boost::phoenix)", shape = pentagon ];
+    "node79" -> "node80" [ style = dashed ] // boost_spirit -> boost_phoenix
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node80" -> "node11" [ style = dashed ] // boost_phoenix -> boost_assert
+    "node16" [ label = "boost_bind\n(Boost::bind)", shape = pentagon ];
+    "node80" -> "node16" [ style = dashed ] // boost_phoenix -> boost_bind
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node80" -> "node12" [ style = dashed ] // boost_phoenix -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node80" -> "node13" [ style = dashed ] // boost_phoenix -> boost_core
+    "node24" [ label = "boost_function\n(Boost::function)", shape = pentagon ];
+    "node80" -> "node24" [ style = dashed ] // boost_phoenix -> boost_function
+    "node32" [ label = "boost_fusion\n(Boost::fusion)", shape = pentagon ];
+    "node80" -> "node32" [ style = dashed ] // boost_phoenix -> boost_fusion
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node80" -> "node28" [ style = dashed ] // boost_phoenix -> boost_mpl
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node80" -> "node29" [ style = dashed ] // boost_phoenix -> boost_predef
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node80" -> "node18" [ style = dashed ] // boost_phoenix -> boost_preprocessor
+    "node81" [ label = "boost_proto\n(Boost::proto)", shape = pentagon ];
+    "node80" -> "node81" [ style = dashed ] // boost_phoenix -> boost_proto
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node81" -> "node12" [ style = dashed ] // boost_proto -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node81" -> "node13" [ style = dashed ] // boost_proto -> boost_core
+    "node32" [ label = "boost_fusion\n(Boost::fusion)", shape = pentagon ];
+    "node81" -> "node32" [ style = dashed ] // boost_proto -> boost_fusion
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node81" -> "node28" [ style = dashed ] // boost_proto -> boost_mpl
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node81" -> "node18" [ style = dashed ] // boost_proto -> boost_preprocessor
+    "node39" [ label = "boost_range\n(Boost::range)", shape = pentagon ];
+    "node81" -> "node39" [ style = dashed ] // boost_proto -> boost_range
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node81" -> "node14" [ style = dashed ] // boost_proto -> boost_static_assert
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node81" -> "node19" [ style = dashed ] // boost_proto -> boost_type_traits
+    "node37" [ label = "boost_typeof\n(Boost::typeof)", shape = pentagon ];
+    "node81" -> "node37" [ style = dashed ] // boost_proto -> boost_typeof
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node81" -> "node30" [ style = dashed ] // boost_proto -> boost_utility
+    "node39" [ label = "boost_range\n(Boost::range)", shape = pentagon ];
+    "node80" -> "node39" [ style = dashed ] // boost_phoenix -> boost_range
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node80" -> "node21" [ style = dashed ] // boost_phoenix -> boost_smart_ptr
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node80" -> "node19" [ style = dashed ] // boost_phoenix -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node80" -> "node30" [ style = dashed ] // boost_phoenix -> boost_utility
+    "node48" [ label = "boost_pool\n(Boost::pool)", shape = pentagon ];
+    "node79" -> "node48" [ style = dashed ] // boost_spirit -> boost_pool
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node79" -> "node18" [ style = dashed ] // boost_spirit -> boost_preprocessor
+    "node81" [ label = "boost_proto\n(Boost::proto)", shape = pentagon ];
+    "node79" -> "node81" [ style = dashed ] // boost_spirit -> boost_proto
+    "node39" [ label = "boost_range\n(Boost::range)", shape = pentagon ];
+    "node79" -> "node39" [ style = dashed ] // boost_spirit -> boost_range
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node79" -> "node21" [ style = dashed ] // boost_spirit -> boost_smart_ptr
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node79" -> "node14" [ style = dashed ] // boost_spirit -> boost_static_assert
+    "node82" [ label = "boost_thread\n(Boost::thread)", shape = octagon ];
+    "node79" -> "node82" [ style = dashed ] // boost_spirit -> boost_thread
+    "node61" [ label = "Threads::Threads", shape = pentagon ];
+    "node82" -> "node61"  // boost_thread -> Threads::Threads
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node82" -> "node11"  // boost_thread -> boost_assert
+    "node60" [ label = "boost_atomic\n(Boost::atomic)", shape = octagon ];
+    "node82" -> "node60"  // boost_thread -> boost_atomic
+    "node61" [ label = "Threads::Threads", shape = pentagon ];
+    "node60" -> "node61" [ style = dotted ] // boost_atomic -> Threads::Threads
+    "node43" [ label = "boost_align\n(Boost::align)", shape = pentagon ];
+    "node60" -> "node43" [ style = dotted ] // boost_atomic -> boost_align
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node60" -> "node11"  // boost_atomic -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node60" -> "node12"  // boost_atomic -> boost_config
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node60" -> "node29" [ style = dotted ] // boost_atomic -> boost_predef
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node60" -> "node18" [ style = dotted ] // boost_atomic -> boost_preprocessor
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node60" -> "node19"  // boost_atomic -> boost_type_traits
+    "node16" [ label = "boost_bind\n(Boost::bind)", shape = pentagon ];
+    "node82" -> "node16"  // boost_thread -> boost_bind
+    "node65" [ label = "boost_chrono\n(Boost::chrono)", shape = octagon ];
+    "node82" -> "node65"  // boost_thread -> boost_chrono
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node65" -> "node11"  // boost_chrono -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node65" -> "node12"  // boost_chrono -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node65" -> "node13"  // boost_chrono -> boost_core
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node65" -> "node49"  // boost_chrono -> boost_integer
+    "node22" [ label = "boost_move\n(Boost::move)", shape = pentagon ];
+    "node65" -> "node22"  // boost_chrono -> boost_move
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node65" -> "node28"  // boost_chrono -> boost_mpl
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node65" -> "node29"  // boost_chrono -> boost_predef
+    "node66" [ label = "boost_ratio\n(Boost::ratio)", shape = pentagon ];
+    "node65" -> "node66"  // boost_chrono -> boost_ratio
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node65" -> "node14"  // boost_chrono -> boost_static_assert
+    "node52" [ label = "boost_system\n(Boost::system)", shape = pentagon ];
+    "node65" -> "node52"  // boost_chrono -> boost_system
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node65" -> "node15"  // boost_chrono -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node65" -> "node19"  // boost_chrono -> boost_type_traits
+    "node37" [ label = "boost_typeof\n(Boost::typeof)", shape = pentagon ];
+    "node65" -> "node37"  // boost_chrono -> boost_typeof
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node65" -> "node30"  // boost_chrono -> boost_utility
+    "node50" [ label = "boost_winapi\n(Boost::winapi)", shape = pentagon ];
+    "node65" -> "node50"  // boost_chrono -> boost_winapi
+    "node17" [ label = "boost_concept_check\n(Boost::concept_check)", shape = pentagon ];
+    "node82" -> "node17"  // boost_thread -> boost_concept_check
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node82" -> "node12"  // boost_thread -> boost_config
+    "node56" [ label = "boost_container\n(Boost::container)", shape = octagon ];
+    "node82" -> "node56"  // boost_thread -> boost_container
+    "node33" [ label = "boost_container_hash\n(Boost::container_hash)", shape = pentagon ];
+    "node82" -> "node33"  // boost_thread -> boost_container_hash
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node82" -> "node13"  // boost_thread -> boost_core
+    "node54" [ label = "boost_date_time\n(Boost::date_time)", shape = octagon ];
+    "node82" -> "node54"  // boost_thread -> boost_date_time
+    "node20" [ label = "boost_exception\n(Boost::exception)", shape = octagon ];
+    "node82" -> "node20"  // boost_thread -> boost_exception
+    "node24" [ label = "boost_function\n(Boost::function)", shape = pentagon ];
+    "node82" -> "node24"  // boost_thread -> boost_function
+    "node31" [ label = "boost_io\n(Boost::io)", shape = pentagon ];
+    "node82" -> "node31"  // boost_thread -> boost_io
+    "node22" [ label = "boost_move\n(Boost::move)", shape = pentagon ];
+    "node82" -> "node22"  // boost_thread -> boost_move
+    "node38" [ label = "boost_optional\n(Boost::optional)", shape = pentagon ];
+    "node82" -> "node38"  // boost_thread -> boost_optional
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node82" -> "node29"  // boost_thread -> boost_predef
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node82" -> "node18"  // boost_thread -> boost_preprocessor
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node82" -> "node21"  // boost_thread -> boost_smart_ptr
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node82" -> "node14"  // boost_thread -> boost_static_assert
+    "node52" [ label = "boost_system\n(Boost::system)", shape = pentagon ];
+    "node82" -> "node52"  // boost_thread -> boost_system
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node82" -> "node15"  // boost_thread -> boost_throw_exception
+    "node23" [ label = "boost_tuple\n(Boost::tuple)", shape = pentagon ];
+    "node82" -> "node23"  // boost_thread -> boost_tuple
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node82" -> "node19"  // boost_thread -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node82" -> "node30"  // boost_thread -> boost_utility
+    "node50" [ label = "boost_winapi\n(Boost::winapi)", shape = pentagon ];
+    "node82" -> "node50"  // boost_thread -> boost_winapi
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node79" -> "node15" [ style = dashed ] // boost_spirit -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node79" -> "node19" [ style = dashed ] // boost_spirit -> boost_type_traits
+    "node37" [ label = "boost_typeof\n(Boost::typeof)", shape = pentagon ];
+    "node79" -> "node37" [ style = dashed ] // boost_spirit -> boost_typeof
+    "node42" [ label = "boost_unordered\n(Boost::unordered)", shape = pentagon ];
+    "node79" -> "node42" [ style = dashed ] // boost_spirit -> boost_unordered
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node79" -> "node30" [ style = dashed ] // boost_spirit -> boost_utility
+    "node83" [ label = "boost_variant\n(Boost::variant)", shape = pentagon ];
+    "node79" -> "node83" [ style = dashed ] // boost_spirit -> boost_variant
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node83" -> "node11" [ style = dashed ] // boost_variant -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node83" -> "node12" [ style = dashed ] // boost_variant -> boost_config
+    "node33" [ label = "boost_container_hash\n(Boost::container_hash)", shape = pentagon ];
+    "node83" -> "node33" [ style = dashed ] // boost_variant -> boost_container_hash
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node83" -> "node13" [ style = dashed ] // boost_variant -> boost_core
+    "node26" [ label = "boost_detail\n(Boost::detail)", shape = pentagon ];
+    "node83" -> "node26" [ style = dashed ] // boost_variant -> boost_detail
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node83" -> "node49" [ style = dashed ] // boost_variant -> boost_integer
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node83" -> "node28" [ style = dashed ] // boost_variant -> boost_mpl
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node83" -> "node18" [ style = dashed ] // boost_variant -> boost_preprocessor
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node83" -> "node14" [ style = dashed ] // boost_variant -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node83" -> "node15" [ style = dashed ] // boost_variant -> boost_throw_exception
+    "node45" [ label = "boost_type_index\n(Boost::type_index)", shape = pentagon ];
+    "node83" -> "node45" [ style = dashed ] // boost_variant -> boost_type_index
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node83" -> "node19" [ style = dashed ] // boost_variant -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node83" -> "node30" [ style = dashed ] // boost_variant -> boost_utility
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node78" -> "node14"  // boost_serialization -> boost_static_assert
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node78" -> "node19"  // boost_serialization -> boost_type_traits
+    "node42" [ label = "boost_unordered\n(Boost::unordered)", shape = pentagon ];
+    "node78" -> "node42"  // boost_serialization -> boost_unordered
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node78" -> "node30"  // boost_serialization -> boost_utility
+    "node83" [ label = "boost_variant\n(Boost::variant)", shape = pentagon ];
+    "node78" -> "node83"  // boost_serialization -> boost_variant
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node71" -> "node21" [ style = dashed ] // boost_geometry -> boost_smart_ptr
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node71" -> "node14" [ style = dashed ] // boost_geometry -> boost_static_assert
+    "node82" [ label = "boost_thread\n(Boost::thread)", shape = octagon ];
+    "node71" -> "node82" [ style = dashed ] // boost_geometry -> boost_thread
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node71" -> "node15" [ style = dashed ] // boost_geometry -> boost_throw_exception
+    "node59" [ label = "boost_tokenizer\n(Boost::tokenizer)", shape = pentagon ];
+    "node71" -> "node59" [ style = dashed ] // boost_geometry -> boost_tokenizer
+    "node23" [ label = "boost_tuple\n(Boost::tuple)", shape = pentagon ];
+    "node71" -> "node23" [ style = dashed ] // boost_geometry -> boost_tuple
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node71" -> "node19" [ style = dashed ] // boost_geometry -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node71" -> "node30" [ style = dashed ] // boost_geometry -> boost_utility
+    "node83" [ label = "boost_variant\n(Boost::variant)", shape = pentagon ];
+    "node71" -> "node83" [ style = dashed ] // boost_geometry -> boost_variant
+    "node53" [ label = "boost_variant2\n(Boost::variant2)", shape = pentagon ];
+    "node71" -> "node53" [ style = dashed ] // boost_geometry -> boost_variant2
+    "node84" [ label = "boost_gil\n(Boost::gil)", shape = pentagon ];
+    "node126" -> "node84"  // carla-python-api -> boost_gil
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node84" -> "node11" [ style = dashed ] // boost_gil -> boost_assert
+    "node17" [ label = "boost_concept_check\n(Boost::concept_check)", shape = pentagon ];
+    "node84" -> "node17" [ style = dashed ] // boost_gil -> boost_concept_check
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node84" -> "node12" [ style = dashed ] // boost_gil -> boost_config
+    "node33" [ label = "boost_container_hash\n(Boost::container_hash)", shape = pentagon ];
+    "node84" -> "node33" [ style = dashed ] // boost_gil -> boost_container_hash
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node84" -> "node13" [ style = dashed ] // boost_gil -> boost_core
+    "node69" [ label = "boost_filesystem\n(Boost::filesystem)", shape = octagon ];
+    "node84" -> "node69" [ style = dashed ] // boost_gil -> boost_filesystem
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node69" -> "node11"  // boost_filesystem -> boost_assert
+    "node60" [ label = "boost_atomic\n(Boost::atomic)", shape = octagon ];
+    "node69" -> "node60" [ style = dotted ] // boost_filesystem -> boost_atomic
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node69" -> "node12"  // boost_filesystem -> boost_config
+    "node33" [ label = "boost_container_hash\n(Boost::container_hash)", shape = pentagon ];
+    "node69" -> "node33"  // boost_filesystem -> boost_container_hash
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node69" -> "node13"  // boost_filesystem -> boost_core
+    "node26" [ label = "boost_detail\n(Boost::detail)", shape = pentagon ];
+    "node69" -> "node26"  // boost_filesystem -> boost_detail
+    "node31" [ label = "boost_io\n(Boost::io)", shape = pentagon ];
+    "node69" -> "node31"  // boost_filesystem -> boost_io
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node69" -> "node25"  // boost_filesystem -> boost_iterator
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node69" -> "node29" [ style = dotted ] // boost_filesystem -> boost_predef
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node69" -> "node21"  // boost_filesystem -> boost_smart_ptr
+    "node52" [ label = "boost_system\n(Boost::system)", shape = pentagon ];
+    "node69" -> "node52"  // boost_filesystem -> boost_system
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node69" -> "node19"  // boost_filesystem -> boost_type_traits
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node84" -> "node49" [ style = dashed ] // boost_gil -> boost_integer
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node84" -> "node25" [ style = dashed ] // boost_gil -> boost_iterator
+    "node35" [ label = "boost_mp11\n(Boost::mp11)", shape = pentagon ];
+    "node84" -> "node35" [ style = dashed ] // boost_gil -> boost_mp11
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node84" -> "node18" [ style = dashed ] // boost_gil -> boost_preprocessor
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node84" -> "node19" [ style = dashed ] // boost_gil -> boost_type_traits
+    "node53" [ label = "boost_variant2\n(Boost::variant2)", shape = pentagon ];
+    "node84" -> "node53" [ style = dashed ] // boost_gil -> boost_variant2
+    "node96" [ label = "boost_python\n(Boost::python)", shape = pentagon ];
+    "node126" -> "node96"  // carla-python-api -> boost_python
+    "node97" [ label = "boost_python310\n(Boost::python310)", shape = octagon ];
+    "node96" -> "node97" [ style = dashed ] // boost_python -> boost_python310
+    "node95" [ label = "Python::Module", shape = pentagon ];
+    "node97" -> "node95"  // boost_python310 -> Python::Module
+    "node43" [ label = "boost_align\n(Boost::align)", shape = pentagon ];
+    "node97" -> "node43"  // boost_python310 -> boost_align
+    "node16" [ label = "boost_bind\n(Boost::bind)", shape = pentagon ];
+    "node97" -> "node16"  // boost_python310 -> boost_bind
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node97" -> "node12"  // boost_python310 -> boost_config
+    "node40" [ label = "boost_conversion\n(Boost::conversion)", shape = pentagon ];
+    "node97" -> "node40"  // boost_python310 -> boost_conversion
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node97" -> "node13"  // boost_python310 -> boost_core
+    "node26" [ label = "boost_detail\n(Boost::detail)", shape = pentagon ];
+    "node97" -> "node26"  // boost_python310 -> boost_detail
+    "node70" [ label = "boost_foreach\n(Boost::foreach)", shape = pentagon ];
+    "node97" -> "node70"  // boost_python310 -> boost_foreach
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node70" -> "node12" [ style = dashed ] // boost_foreach -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node70" -> "node13" [ style = dashed ] // boost_foreach -> boost_core
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node70" -> "node25" [ style = dashed ] // boost_foreach -> boost_iterator
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node70" -> "node28" [ style = dashed ] // boost_foreach -> boost_mpl
+    "node39" [ label = "boost_range\n(Boost::range)", shape = pentagon ];
+    "node70" -> "node39" [ style = dashed ] // boost_foreach -> boost_range
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node70" -> "node19" [ style = dashed ] // boost_foreach -> boost_type_traits
+    "node24" [ label = "boost_function\n(Boost::function)", shape = pentagon ];
+    "node97" -> "node24"  // boost_python310 -> boost_function
+    "node85" [ label = "boost_graph\n(Boost::graph)", shape = octagon ];
+    "node97" -> "node85" [ style = dotted ] // boost_python310 -> boost_graph
+    "node9" [ label = "boost_algorithm\n(Boost::algorithm)", shape = pentagon ];
+    "node85" -> "node9"  // boost_graph -> boost_algorithm
+    "node44" [ label = "boost_any\n(Boost::any)", shape = pentagon ];
+    "node85" -> "node44"  // boost_graph -> boost_any
+    "node10" [ label = "boost_array\n(Boost::array)", shape = pentagon ];
+    "node85" -> "node10"  // boost_graph -> boost_array
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node85" -> "node11"  // boost_graph -> boost_assert
+    "node62" [ label = "boost_bimap\n(Boost::bimap)", shape = pentagon ];
+    "node85" -> "node62"  // boost_graph -> boost_bimap
+    "node17" [ label = "boost_concept_check\n(Boost::concept_check)", shape = pentagon ];
+    "node62" -> "node17" [ style = dashed ] // boost_bimap -> boost_concept_check
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node62" -> "node12" [ style = dashed ] // boost_bimap -> boost_config
+    "node33" [ label = "boost_container_hash\n(Boost::container_hash)", shape = pentagon ];
+    "node62" -> "node33" [ style = dashed ] // boost_bimap -> boost_container_hash
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node62" -> "node13" [ style = dashed ] // boost_bimap -> boost_core
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node62" -> "node25" [ style = dashed ] // boost_bimap -> boost_iterator
+    "node63" [ label = "boost_lambda\n(Boost::lambda)", shape = pentagon ];
+    "node62" -> "node63" [ style = dashed ] // boost_bimap -> boost_lambda
+    "node16" [ label = "boost_bind\n(Boost::bind)", shape = pentagon ];
+    "node63" -> "node16" [ style = dashed ] // boost_lambda -> boost_bind
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node63" -> "node12" [ style = dashed ] // boost_lambda -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node63" -> "node13" [ style = dashed ] // boost_lambda -> boost_core
+    "node26" [ label = "boost_detail\n(Boost::detail)", shape = pentagon ];
+    "node63" -> "node26" [ style = dashed ] // boost_lambda -> boost_detail
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node63" -> "node25" [ style = dashed ] // boost_lambda -> boost_iterator
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node63" -> "node28" [ style = dashed ] // boost_lambda -> boost_mpl
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node63" -> "node18" [ style = dashed ] // boost_lambda -> boost_preprocessor
+    "node23" [ label = "boost_tuple\n(Boost::tuple)", shape = pentagon ];
+    "node63" -> "node23" [ style = dashed ] // boost_lambda -> boost_tuple
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node63" -> "node19" [ style = dashed ] // boost_lambda -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node63" -> "node30" [ style = dashed ] // boost_lambda -> boost_utility
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node62" -> "node28" [ style = dashed ] // boost_bimap -> boost_mpl
+    "node64" [ label = "boost_multi_index\n(Boost::multi_index)", shape = pentagon ];
+    "node62" -> "node64" [ style = dashed ] // boost_bimap -> boost_multi_index
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node64" -> "node11" [ style = dashed ] // boost_multi_index -> boost_assert
+    "node16" [ label = "boost_bind\n(Boost::bind)", shape = pentagon ];
+    "node64" -> "node16" [ style = dashed ] // boost_multi_index -> boost_bind
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node64" -> "node12" [ style = dashed ] // boost_multi_index -> boost_config
+    "node33" [ label = "boost_container_hash\n(Boost::container_hash)", shape = pentagon ];
+    "node64" -> "node33" [ style = dashed ] // boost_multi_index -> boost_container_hash
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node64" -> "node13" [ style = dashed ] // boost_multi_index -> boost_core
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node64" -> "node49" [ style = dashed ] // boost_multi_index -> boost_integer
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node64" -> "node25" [ style = dashed ] // boost_multi_index -> boost_iterator
+    "node22" [ label = "boost_move\n(Boost::move)", shape = pentagon ];
+    "node64" -> "node22" [ style = dashed ] // boost_multi_index -> boost_move
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node64" -> "node28" [ style = dashed ] // boost_multi_index -> boost_mpl
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node64" -> "node18" [ style = dashed ] // boost_multi_index -> boost_preprocessor
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node64" -> "node21" [ style = dashed ] // boost_multi_index -> boost_smart_ptr
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node64" -> "node14" [ style = dashed ] // boost_multi_index -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node64" -> "node15" [ style = dashed ] // boost_multi_index -> boost_throw_exception
+    "node23" [ label = "boost_tuple\n(Boost::tuple)", shape = pentagon ];
+    "node64" -> "node23" [ style = dashed ] // boost_multi_index -> boost_tuple
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node64" -> "node19" [ style = dashed ] // boost_multi_index -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node64" -> "node30" [ style = dashed ] // boost_multi_index -> boost_utility
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node62" -> "node18" [ style = dashed ] // boost_bimap -> boost_preprocessor
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node62" -> "node14" [ style = dashed ] // boost_bimap -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node62" -> "node15" [ style = dashed ] // boost_bimap -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node62" -> "node19" [ style = dashed ] // boost_bimap -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node62" -> "node30" [ style = dashed ] // boost_bimap -> boost_utility
+    "node16" [ label = "boost_bind\n(Boost::bind)", shape = pentagon ];
+    "node85" -> "node16"  // boost_graph -> boost_bind
+    "node17" [ label = "boost_concept_check\n(Boost::concept_check)", shape = pentagon ];
+    "node85" -> "node17"  // boost_graph -> boost_concept_check
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node85" -> "node12"  // boost_graph -> boost_config
+    "node33" [ label = "boost_container_hash\n(Boost::container_hash)", shape = pentagon ];
+    "node85" -> "node33"  // boost_graph -> boost_container_hash
+    "node40" [ label = "boost_conversion\n(Boost::conversion)", shape = pentagon ];
+    "node85" -> "node40"  // boost_graph -> boost_conversion
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node85" -> "node13"  // boost_graph -> boost_core
+    "node26" [ label = "boost_detail\n(Boost::detail)", shape = pentagon ];
+    "node85" -> "node26"  // boost_graph -> boost_detail
+    "node70" [ label = "boost_foreach\n(Boost::foreach)", shape = pentagon ];
+    "node85" -> "node70"  // boost_graph -> boost_foreach
+    "node24" [ label = "boost_function\n(Boost::function)", shape = pentagon ];
+    "node85" -> "node24"  // boost_graph -> boost_function
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node85" -> "node49"  // boost_graph -> boost_integer
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node85" -> "node25"  // boost_graph -> boost_iterator
+    "node55" [ label = "boost_lexical_cast\n(Boost::lexical_cast)", shape = pentagon ];
+    "node85" -> "node55"  // boost_graph -> boost_lexical_cast
+    "node72" [ label = "boost_math\n(Boost::math)", shape = pentagon ];
+    "node85" -> "node72"  // boost_graph -> boost_math
+    "node22" [ label = "boost_move\n(Boost::move)", shape = pentagon ];
+    "node85" -> "node22"  // boost_graph -> boost_move
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node85" -> "node28"  // boost_graph -> boost_mpl
+    "node64" [ label = "boost_multi_index\n(Boost::multi_index)", shape = pentagon ];
+    "node85" -> "node64"  // boost_graph -> boost_multi_index
+    "node38" [ label = "boost_optional\n(Boost::optional)", shape = pentagon ];
+    "node85" -> "node38"  // boost_graph -> boost_optional
+    "node86" [ label = "boost_parameter\n(Boost::parameter)", shape = pentagon ];
+    "node85" -> "node86"  // boost_graph -> boost_parameter
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node86" -> "node12" [ style = dashed ] // boost_parameter -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node86" -> "node13" [ style = dashed ] // boost_parameter -> boost_core
+    "node24" [ label = "boost_function\n(Boost::function)", shape = pentagon ];
+    "node86" -> "node24" [ style = dashed ] // boost_parameter -> boost_function
+    "node32" [ label = "boost_fusion\n(Boost::fusion)", shape = pentagon ];
+    "node86" -> "node32" [ style = dashed ] // boost_parameter -> boost_fusion
+    "node35" [ label = "boost_mp11\n(Boost::mp11)", shape = pentagon ];
+    "node86" -> "node35" [ style = dashed ] // boost_parameter -> boost_mp11
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node86" -> "node28" [ style = dashed ] // boost_parameter -> boost_mpl
+    "node38" [ label = "boost_optional\n(Boost::optional)", shape = pentagon ];
+    "node86" -> "node38" [ style = dashed ] // boost_parameter -> boost_optional
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node86" -> "node18" [ style = dashed ] // boost_parameter -> boost_preprocessor
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node86" -> "node19" [ style = dashed ] // boost_parameter -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node86" -> "node30" [ style = dashed ] // boost_parameter -> boost_utility
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node85" -> "node18"  // boost_graph -> boost_preprocessor
+    "node87" [ label = "boost_property_map\n(Boost::property_map)", shape = pentagon ];
+    "node85" -> "node87"  // boost_graph -> boost_property_map
+    "node44" [ label = "boost_any\n(Boost::any)", shape = pentagon ];
+    "node87" -> "node44" [ style = dashed ] // boost_property_map -> boost_any
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node87" -> "node11" [ style = dashed ] // boost_property_map -> boost_assert
+    "node17" [ label = "boost_concept_check\n(Boost::concept_check)", shape = pentagon ];
+    "node87" -> "node17" [ style = dashed ] // boost_property_map -> boost_concept_check
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node87" -> "node12" [ style = dashed ] // boost_property_map -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node87" -> "node13" [ style = dashed ] // boost_property_map -> boost_core
+    "node24" [ label = "boost_function\n(Boost::function)", shape = pentagon ];
+    "node87" -> "node24" [ style = dashed ] // boost_property_map -> boost_function
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node87" -> "node25" [ style = dashed ] // boost_property_map -> boost_iterator
+    "node55" [ label = "boost_lexical_cast\n(Boost::lexical_cast)", shape = pentagon ];
+    "node87" -> "node55" [ style = dashed ] // boost_property_map -> boost_lexical_cast
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node87" -> "node28" [ style = dashed ] // boost_property_map -> boost_mpl
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node87" -> "node21" [ style = dashed ] // boost_property_map -> boost_smart_ptr
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node87" -> "node14" [ style = dashed ] // boost_property_map -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node87" -> "node15" [ style = dashed ] // boost_property_map -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node87" -> "node19" [ style = dashed ] // boost_property_map -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node87" -> "node30" [ style = dashed ] // boost_property_map -> boost_utility
+    "node88" [ label = "boost_property_tree\n(Boost::property_tree)", shape = pentagon ];
+    "node85" -> "node88"  // boost_graph -> boost_property_tree
+    "node44" [ label = "boost_any\n(Boost::any)", shape = pentagon ];
+    "node88" -> "node44" [ style = dashed ] // boost_property_tree -> boost_any
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node88" -> "node11" [ style = dashed ] // boost_property_tree -> boost_assert
+    "node16" [ label = "boost_bind\n(Boost::bind)", shape = pentagon ];
+    "node88" -> "node16" [ style = dashed ] // boost_property_tree -> boost_bind
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node88" -> "node12" [ style = dashed ] // boost_property_tree -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node88" -> "node13" [ style = dashed ] // boost_property_tree -> boost_core
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node88" -> "node25" [ style = dashed ] // boost_property_tree -> boost_iterator
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node88" -> "node28" [ style = dashed ] // boost_property_tree -> boost_mpl
+    "node64" [ label = "boost_multi_index\n(Boost::multi_index)", shape = pentagon ];
+    "node88" -> "node64" [ style = dashed ] // boost_property_tree -> boost_multi_index
+    "node38" [ label = "boost_optional\n(Boost::optional)", shape = pentagon ];
+    "node88" -> "node38" [ style = dashed ] // boost_property_tree -> boost_optional
+    "node39" [ label = "boost_range\n(Boost::range)", shape = pentagon ];
+    "node88" -> "node39" [ style = dashed ] // boost_property_tree -> boost_range
+    "node78" [ label = "boost_serialization\n(Boost::serialization)", shape = octagon ];
+    "node88" -> "node78" [ style = dashed ] // boost_property_tree -> boost_serialization
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node88" -> "node14" [ style = dashed ] // boost_property_tree -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node88" -> "node15" [ style = dashed ] // boost_property_tree -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node88" -> "node19" [ style = dashed ] // boost_property_tree -> boost_type_traits
+    "node73" [ label = "boost_random\n(Boost::random)", shape = octagon ];
+    "node85" -> "node73"  // boost_graph -> boost_random
+    "node39" [ label = "boost_range\n(Boost::range)", shape = pentagon ];
+    "node85" -> "node39"  // boost_graph -> boost_range
+    "node41" [ label = "boost_regex\n(Boost::regex)", shape = pentagon ];
+    "node85" -> "node41" [ style = dotted ] // boost_graph -> boost_regex
+    "node78" [ label = "boost_serialization\n(Boost::serialization)", shape = octagon ];
+    "node85" -> "node78"  // boost_graph -> boost_serialization
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node85" -> "node21"  // boost_graph -> boost_smart_ptr
+    "node79" [ label = "boost_spirit\n(Boost::spirit)", shape = pentagon ];
+    "node85" -> "node79"  // boost_graph -> boost_spirit
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node85" -> "node14"  // boost_graph -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node85" -> "node15"  // boost_graph -> boost_throw_exception
+    "node89" [ label = "boost_tti\n(Boost::tti)", shape = pentagon ];
+    "node85" -> "node89"  // boost_graph -> boost_tti
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node89" -> "node12" [ style = dashed ] // boost_tti -> boost_config
+    "node27" [ label = "boost_function_types\n(Boost::function_types)", shape = pentagon ];
+    "node89" -> "node27" [ style = dashed ] // boost_tti -> boost_function_types
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node89" -> "node28" [ style = dashed ] // boost_tti -> boost_mpl
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node89" -> "node18" [ style = dashed ] // boost_tti -> boost_preprocessor
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node89" -> "node19" [ style = dashed ] // boost_tti -> boost_type_traits
+    "node23" [ label = "boost_tuple\n(Boost::tuple)", shape = pentagon ];
+    "node85" -> "node23"  // boost_graph -> boost_tuple
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node85" -> "node19"  // boost_graph -> boost_type_traits
+    "node37" [ label = "boost_typeof\n(Boost::typeof)", shape = pentagon ];
+    "node85" -> "node37"  // boost_graph -> boost_typeof
+    "node42" [ label = "boost_unordered\n(Boost::unordered)", shape = pentagon ];
+    "node85" -> "node42"  // boost_graph -> boost_unordered
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node85" -> "node30"  // boost_graph -> boost_utility
+    "node90" [ label = "boost_xpressive\n(Boost::xpressive)", shape = pentagon ];
+    "node85" -> "node90"  // boost_graph -> boost_xpressive
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node90" -> "node11" [ style = dashed ] // boost_xpressive -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node90" -> "node12" [ style = dashed ] // boost_xpressive -> boost_config
+    "node40" [ label = "boost_conversion\n(Boost::conversion)", shape = pentagon ];
+    "node90" -> "node40" [ style = dashed ] // boost_xpressive -> boost_conversion
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node90" -> "node13" [ style = dashed ] // boost_xpressive -> boost_core
+    "node20" [ label = "boost_exception\n(Boost::exception)", shape = octagon ];
+    "node90" -> "node20" [ style = dashed ] // boost_xpressive -> boost_exception
+    "node32" [ label = "boost_fusion\n(Boost::fusion)", shape = pentagon ];
+    "node90" -> "node32" [ style = dashed ] // boost_xpressive -> boost_fusion
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node90" -> "node49" [ style = dashed ] // boost_xpressive -> boost_integer
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node90" -> "node25" [ style = dashed ] // boost_xpressive -> boost_iterator
+    "node55" [ label = "boost_lexical_cast\n(Boost::lexical_cast)", shape = pentagon ];
+    "node90" -> "node55" [ style = dashed ] // boost_xpressive -> boost_lexical_cast
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node90" -> "node28" [ style = dashed ] // boost_xpressive -> boost_mpl
+    "node58" [ label = "boost_numeric_conversion\n(Boost::numeric_conversion)", shape = pentagon ];
+    "node90" -> "node58" [ style = dashed ] // boost_xpressive -> boost_numeric_conversion
+    "node38" [ label = "boost_optional\n(Boost::optional)", shape = pentagon ];
+    "node90" -> "node38" [ style = dashed ] // boost_xpressive -> boost_optional
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node90" -> "node18" [ style = dashed ] // boost_xpressive -> boost_preprocessor
+    "node81" [ label = "boost_proto\n(Boost::proto)", shape = pentagon ];
+    "node90" -> "node81" [ style = dashed ] // boost_xpressive -> boost_proto
+    "node39" [ label = "boost_range\n(Boost::range)", shape = pentagon ];
+    "node90" -> "node39" [ style = dashed ] // boost_xpressive -> boost_range
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node90" -> "node21" [ style = dashed ] // boost_xpressive -> boost_smart_ptr
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node90" -> "node14" [ style = dashed ] // boost_xpressive -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node90" -> "node15" [ style = dashed ] // boost_xpressive -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node90" -> "node19" [ style = dashed ] // boost_xpressive -> boost_type_traits
+    "node37" [ label = "boost_typeof\n(Boost::typeof)", shape = pentagon ];
+    "node90" -> "node37" [ style = dashed ] // boost_xpressive -> boost_typeof
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node90" -> "node30" [ style = dashed ] // boost_xpressive -> boost_utility
+    "node49" [ label = "boost_integer\n(Boost::integer)", shape = pentagon ];
+    "node97" -> "node49" [ style = dotted ] // boost_python310 -> boost_integer
+    "node25" [ label = "boost_iterator\n(Boost::iterator)", shape = pentagon ];
+    "node97" -> "node25"  // boost_python310 -> boost_iterator
+    "node55" [ label = "boost_lexical_cast\n(Boost::lexical_cast)", shape = pentagon ];
+    "node97" -> "node55"  // boost_python310 -> boost_lexical_cast
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node97" -> "node28"  // boost_python310 -> boost_mpl
+    "node58" [ label = "boost_numeric_conversion\n(Boost::numeric_conversion)", shape = pentagon ];
+    "node97" -> "node58"  // boost_python310 -> boost_numeric_conversion
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node97" -> "node18"  // boost_python310 -> boost_preprocessor
+    "node87" [ label = "boost_property_map\n(Boost::property_map)", shape = pentagon ];
+    "node97" -> "node87" [ style = dotted ] // boost_python310 -> boost_property_map
+    "node21" [ label = "boost_smart_ptr\n(Boost::smart_ptr)", shape = pentagon ];
+    "node97" -> "node21"  // boost_python310 -> boost_smart_ptr
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node97" -> "node14"  // boost_python310 -> boost_static_assert
+    "node23" [ label = "boost_tuple\n(Boost::tuple)", shape = pentagon ];
+    "node97" -> "node23"  // boost_python310 -> boost_tuple
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node97" -> "node19"  // boost_python310 -> boost_type_traits
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node97" -> "node30"  // boost_python310 -> boost_utility
+    "node104" [ label = "carla-client", shape = octagon ];
+    "node126" -> "node104"  // carla-python-api -> carla-client
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node104" -> "node1"  // carla-client -> Detour
+    "node4" [ label = "DetourCrowd\n(RecastNavigation::DetourCrowd)", shape = octagon ];
+    "node104" -> "node4"  // carla-client -> DetourCrowd
+    "node3" [ label = "Recast\n(RecastNavigation::Recast)", shape = octagon ];
+    "node104" -> "node3"  // carla-client -> Recast
+    "node9" [ label = "boost_algorithm\n(Boost::algorithm)", shape = pentagon ];
+    "node104" -> "node9"  // carla-client -> boost_algorithm
+    "node46" [ label = "boost_asio\n(Boost::asio)", shape = pentagon ];
+    "node104" -> "node46"  // carla-client -> boost_asio
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node104" -> "node11"  // carla-client -> boost_assert
+    "node71" [ label = "boost_geometry\n(Boost::geometry)", shape = pentagon ];
+    "node104" -> "node71"  // carla-client -> boost_geometry
+    "node84" [ label = "boost_gil\n(Boost::gil)", shape = pentagon ];
+    "node104" -> "node84"  // carla-client -> boost_gil
+    "node96" [ label = "boost_python\n(Boost::python)", shape = pentagon ];
+    "node104" -> "node96"  // carla-client -> boost_python
+    "node105" [ label = "png_static", shape = octagon ];
+    "node104" -> "node105"  // carla-client -> png_static
+    "node106" [ label = "/home/sysadmin/git/CarlaUE5/Build/Linux-Release/_deps/zlib-build/libz.a", shape = septagon ];
+    "node105" -> "node106"  // png_static -> /home/sysadmin/git/CarlaUE5/Build/Linux-Release/_deps/zlib-build/libz.a
+    "node107" [ label = "/usr/lib/x86_64-linux-gnu/libm.so", shape = septagon ];
+    "node105" -> "node107"  // png_static -> /usr/lib/x86_64-linux-gnu/libm.so
+    "node108" [ label = "png_genfiles", shape = box ];
+    "node105" -> "node108"  // png_static -> png_genfiles
+    "node109" [ label = "png_gensym", shape = box ];
+    "node108" -> "node109"  // png_genfiles -> png_gensym
+    "node110" [ label = "png_scripts_sym_out", shape = box ];
+    "node109" -> "node110"  // png_gensym -> png_scripts_sym_out
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node110" -> "node111"  // png_scripts_sym_out -> pnglibconf_c
+    "node112" [ label = "pnglibconf_h", shape = box ];
+    "node110" -> "node112"  // png_scripts_sym_out -> pnglibconf_h
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node112" -> "node111"  // pnglibconf_h -> pnglibconf_c
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node112" -> "node113"  // pnglibconf_h -> pnglibconf_out
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node113" -> "node111"  // pnglibconf_out -> pnglibconf_c
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node110" -> "node113"  // png_scripts_sym_out -> pnglibconf_out
+    "node114" [ label = "png_genvers", shape = box ];
+    "node108" -> "node114"  // png_genfiles -> png_genvers
+    "node115" [ label = "png_scripts_vers_out", shape = box ];
+    "node114" -> "node115"  // png_genvers -> png_scripts_vers_out
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node115" -> "node111"  // png_scripts_vers_out -> pnglibconf_c
+    "node112" [ label = "pnglibconf_h", shape = box ];
+    "node115" -> "node112"  // png_scripts_vers_out -> pnglibconf_h
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node115" -> "node113"  // png_scripts_vers_out -> pnglibconf_out
+    "node116" [ label = "png_scripts_intprefix_out", shape = box ];
+    "node108" -> "node116"  // png_genfiles -> png_scripts_intprefix_out
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node116" -> "node111"  // png_scripts_intprefix_out -> pnglibconf_c
+    "node112" [ label = "pnglibconf_h", shape = box ];
+    "node116" -> "node112"  // png_scripts_intprefix_out -> pnglibconf_h
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node116" -> "node113"  // png_scripts_intprefix_out -> pnglibconf_out
+    "node117" [ label = "png_scripts_pnglibconf_c", shape = box ];
+    "node108" -> "node117"  // png_genfiles -> png_scripts_pnglibconf_c
+    "node118" [ label = "png_scripts_prefix_out", shape = box ];
+    "node108" -> "node118"  // png_genfiles -> png_scripts_prefix_out
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node118" -> "node111"  // png_scripts_prefix_out -> pnglibconf_c
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node118" -> "node113"  // png_scripts_prefix_out -> pnglibconf_out
+    "node110" [ label = "png_scripts_sym_out", shape = box ];
+    "node108" -> "node110"  // png_genfiles -> png_scripts_sym_out
+    "node119" [ label = "png_scripts_symbols_chk", shape = box ];
+    "node108" -> "node119"  // png_genfiles -> png_scripts_symbols_chk
+    "node120" [ label = "png_scripts_symbols_out", shape = box ];
+    "node119" -> "node120"  // png_scripts_symbols_chk -> png_scripts_symbols_out
+    "node120" [ label = "png_scripts_symbols_out", shape = box ];
+    "node108" -> "node120"  // png_genfiles -> png_scripts_symbols_out
+    "node115" [ label = "png_scripts_vers_out", shape = box ];
+    "node108" -> "node115"  // png_genfiles -> png_scripts_vers_out
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node108" -> "node111"  // png_genfiles -> pnglibconf_c
+    "node112" [ label = "pnglibconf_h", shape = box ];
+    "node108" -> "node112"  // png_genfiles -> pnglibconf_h
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node108" -> "node113"  // png_genfiles -> pnglibconf_out
+    "node121" [ label = "pngprefix_h", shape = box ];
+    "node108" -> "node121"  // png_genfiles -> pngprefix_h
+    "node105" [ label = "png_static", shape = octagon ];
+    "node105" -> "node105"  // png_static -> png_static
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node105" -> "node111"  // png_static -> pnglibconf_c
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node105" -> "node113"  // png_static -> pnglibconf_out
+    "node122" [ label = "rpc", shape = octagon ];
+    "node104" -> "node122"  // carla-client -> rpc
+    "node123" [ label = "zlibstatic", shape = octagon ];
+    "node104" -> "node123"  // carla-client -> zlibstatic
+    "node105" [ label = "png_static", shape = octagon ];
+    "node126" -> "node105"  // carla-python-api -> png_static
+    "node122" [ label = "rpc", shape = octagon ];
+    "node126" -> "node122"  // carla-python-api -> rpc
+    "node123" [ label = "zlibstatic", shape = octagon ];
+    "node126" -> "node123"  // carla-python-api -> zlibstatic
+    "node138" [ label = "carla-unreal-editor", shape = box ];
+    "node139" -> "node138"  // carla-unreal-package -> carla-unreal-editor
+    "node5" [ label = "RecastBuilder", shape = egg ];
+    "node138" -> "node5"  // carla-unreal-editor -> RecastBuilder
+    "node0" [ label = "DebugUtils\n(RecastNavigation::DebugUtils)", shape = octagon ];
+    "node5" -> "node0" [ style = dotted ] // RecastBuilder -> DebugUtils
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node0" -> "node1"  // DebugUtils -> Detour
+    "node2" [ label = "DetourTileCache\n(RecastNavigation::DetourTileCache)", shape = octagon ];
+    "node0" -> "node2"  // DebugUtils -> DetourTileCache
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node2" -> "node1"  // DetourTileCache -> Detour
+    "node3" [ label = "Recast\n(RecastNavigation::Recast)", shape = octagon ];
+    "node0" -> "node3"  // DebugUtils -> Recast
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node5" -> "node1" [ style = dotted ] // RecastBuilder -> Detour
+    "node4" [ label = "DetourCrowd\n(RecastNavigation::DetourCrowd)", shape = octagon ];
+    "node5" -> "node4" [ style = dotted ] // RecastBuilder -> DetourCrowd
+    "node2" [ label = "DetourTileCache\n(RecastNavigation::DetourTileCache)", shape = octagon ];
+    "node5" -> "node2" [ style = dotted ] // RecastBuilder -> DetourTileCache
+    "node3" [ label = "Recast\n(RecastNavigation::Recast)", shape = octagon ];
+    "node5" -> "node3" [ style = dotted ] // RecastBuilder -> Recast
+    "node46" [ label = "boost_asio\n(Boost::asio)", shape = pentagon ];
+    "node138" -> "node46"  // carla-unreal-editor -> boost_asio
+    "node71" [ label = "boost_geometry\n(Boost::geometry)", shape = pentagon ];
+    "node138" -> "node71"  // carla-unreal-editor -> boost_geometry
+    "node84" [ label = "boost_gil\n(Boost::gil)", shape = pentagon ];
+    "node138" -> "node84"  // carla-unreal-editor -> boost_gil
+    "node96" [ label = "boost_python\n(Boost::python)", shape = pentagon ];
+    "node138" -> "node96"  // carla-unreal-editor -> boost_python
+    "node104" [ label = "carla-client", shape = octagon ];
+    "node138" -> "node104"  // carla-unreal-editor -> carla-client
+    "node133" [ label = "carla-server", shape = octagon ];
+    "node138" -> "node133"  // carla-unreal-editor -> carla-server
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node133" -> "node1"  // carla-server -> Detour
+    "node4" [ label = "DetourCrowd\n(RecastNavigation::DetourCrowd)", shape = octagon ];
+    "node133" -> "node4"  // carla-server -> DetourCrowd
+    "node3" [ label = "Recast\n(RecastNavigation::Recast)", shape = octagon ];
+    "node133" -> "node3"  // carla-server -> Recast
+    "node9" [ label = "boost_algorithm\n(Boost::algorithm)", shape = pentagon ];
+    "node133" -> "node9"  // carla-server -> boost_algorithm
+    "node46" [ label = "boost_asio\n(Boost::asio)", shape = pentagon ];
+    "node133" -> "node46"  // carla-server -> boost_asio
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node133" -> "node11"  // carla-server -> boost_assert
+    "node71" [ label = "boost_geometry\n(Boost::geometry)", shape = pentagon ];
+    "node133" -> "node71"  // carla-server -> boost_geometry
+    "node84" [ label = "boost_gil\n(Boost::gil)", shape = pentagon ];
+    "node133" -> "node84"  // carla-server -> boost_gil
+    "node128" [ label = "carla-ros2-native", shape = box ];
+    "node133" -> "node128"  // carla-server -> carla-ros2-native
+    "node129" [ label = "carla-ros2-native-lib", shape = box ];
+    "node128" -> "node129"  // carla-ros2-native -> carla-ros2-native-lib
+    "node130" [ label = "fastdds", shape = box ];
+    "node129" -> "node130"  // carla-ros2-native-lib -> fastdds
+    "node131" [ label = "fastcdr", shape = box ];
+    "node130" -> "node131"  // fastdds -> fastcdr
+    "node132" [ label = "foonathan_memory", shape = box ];
+    "node130" -> "node132"  // fastdds -> foonathan_memory
+    "node105" [ label = "png_static", shape = octagon ];
+    "node133" -> "node105"  // carla-server -> png_static
+    "node122" [ label = "rpc", shape = octagon ];
+    "node133" -> "node122"  // carla-server -> rpc
+    "node123" [ label = "zlibstatic", shape = octagon ];
+    "node133" -> "node123"  // carla-server -> zlibstatic
+    "node134" [ label = "carla-unreal", shape = box ];
+    "node138" -> "node134"  // carla-unreal-editor -> carla-unreal
+    "node5" [ label = "RecastBuilder", shape = egg ];
+    "node134" -> "node5"  // carla-unreal -> RecastBuilder
+    "node46" [ label = "boost_asio\n(Boost::asio)", shape = pentagon ];
+    "node134" -> "node46"  // carla-unreal -> boost_asio
+    "node71" [ label = "boost_geometry\n(Boost::geometry)", shape = pentagon ];
+    "node134" -> "node71"  // carla-unreal -> boost_geometry
+    "node84" [ label = "boost_gil\n(Boost::gil)", shape = pentagon ];
+    "node134" -> "node84"  // carla-unreal -> boost_gil
+    "node96" [ label = "boost_python\n(Boost::python)", shape = pentagon ];
+    "node134" -> "node96"  // carla-unreal -> boost_python
+    "node104" [ label = "carla-client", shape = octagon ];
+    "node134" -> "node104"  // carla-unreal -> carla-client
+    "node133" [ label = "carla-server", shape = octagon ];
+    "node134" -> "node133"  // carla-unreal -> carla-server
+    "node135" [ label = "carla-unreal-configure", shape = box ];
+    "node134" -> "node135"  // carla-unreal -> carla-unreal-configure
+    "node136" [ label = "eigen\n(Eigen3::Eigen)", shape = pentagon ];
+    "node134" -> "node136"  // carla-unreal -> eigen
+    "node137" [ label = "libsqlite3", shape = octagon ];
+    "node134" -> "node137"  // carla-unreal -> libsqlite3
+    "node61" [ label = "Threads::Threads", shape = pentagon ];
+    "node137" -> "node61" [ style = dotted ] // libsqlite3 -> Threads::Threads
+    "node102" [ label = "dl", shape = septagon ];
+    "node137" -> "node102" [ style = dotted ] // libsqlite3 -> dl
+    "node105" [ label = "png_static", shape = octagon ];
+    "node134" -> "node105"  // carla-unreal -> png_static
+    "node122" [ label = "rpc", shape = octagon ];
+    "node134" -> "node122"  // carla-unreal -> rpc
+    "node123" [ label = "zlibstatic", shape = octagon ];
+    "node134" -> "node123"  // carla-unreal -> zlibstatic
+    "node135" [ label = "carla-unreal-configure", shape = box ];
+    "node138" -> "node135"  // carla-unreal-editor -> carla-unreal-configure
+    "node136" [ label = "eigen\n(Eigen3::Eigen)", shape = pentagon ];
+    "node138" -> "node136"  // carla-unreal-editor -> eigen
+    "node137" [ label = "libsqlite3", shape = octagon ];
+    "node138" -> "node137"  // carla-unreal-editor -> libsqlite3
+    "node105" [ label = "png_static", shape = octagon ];
+    "node138" -> "node105"  // carla-unreal-editor -> png_static
+    "node122" [ label = "rpc", shape = octagon ];
+    "node138" -> "node122"  // carla-unreal-editor -> rpc
+    "node123" [ label = "zlibstatic", shape = octagon ];
+    "node138" -> "node123"  // carla-unreal-editor -> zlibstatic
+}

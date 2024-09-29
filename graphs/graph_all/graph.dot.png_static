@@ -1,0 +1,12 @@
+digraph "png_static" {
+node [
+  fontsize = "12"
+];
+    "node105" [ label = "png_static", shape = octagon ];
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node105" -> "node111"  // png_static -> pnglibconf_c
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node105" -> "node113"  // png_static -> pnglibconf_out
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node113" -> "node111"  // pnglibconf_out -> pnglibconf_c
+}

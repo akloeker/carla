@@ -1,0 +1,8 @@
+digraph "sqlite3" {
+node [
+  fontsize = "12"
+];
+    "node78" [ label = "sqlite3", shape = egg ];
+    "node54" [ label = "libsqlite3", shape = octagon ];
+    "node78" -> "node54" [ style = dotted ] // sqlite3 -> libsqlite3
+}

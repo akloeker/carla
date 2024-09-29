@@ -1,0 +1,8 @@
+digraph "boost_typeof" {
+node [
+  fontsize = "12"
+];
+    "node37" [ label = "boost_typeof\n(Boost::typeof)", shape = pentagon ];
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node37" -> "node12" [ style = dashed ] // boost_typeof -> boost_config
+}

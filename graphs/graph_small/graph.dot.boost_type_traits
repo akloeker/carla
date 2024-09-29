@@ -1,0 +1,12 @@
+digraph "boost_type_traits" {
+node [
+  fontsize = "12"
+];
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node19" -> "node12" [ style = dashed ] // boost_type_traits -> boost_config
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node19" -> "node14" [ style = dashed ] // boost_type_traits -> boost_static_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node14" -> "node12" [ style = dashed ] // boost_static_assert -> boost_config
+}

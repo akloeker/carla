@@ -1,0 +1,76 @@
+digraph "boost_lambda" {
+node [
+  fontsize = "12"
+];
+    "node62" [ label = "boost_lambda\n(Boost::lambda)", shape = pentagon ];
+    "node61" [ label = "boost_bimap\n(Boost::bimap)", shape = pentagon ];
+    "node61" -> "node62" [ style = dashed ] // boost_bimap -> boost_lambda
+    "node84" [ label = "boost_graph\n(Boost::graph)", shape = octagon ];
+    "node84" -> "node61"  // boost_graph -> boost_bimap
+    "node94" [ label = "boost_python310\n(Boost::python310)", shape = octagon ];
+    "node94" -> "node84" [ style = dotted ] // boost_python310 -> boost_graph
+    "node93" [ label = "boost_python\n(Boost::python)", shape = pentagon ];
+    "node93" -> "node94" [ style = dashed ] // boost_python -> boost_python310
+    "node92" [ label = "boost_numpy310\n(Boost::numpy310)", shape = octagon ];
+    "node92" -> "node93"  // boost_numpy310 -> boost_python
+    "node91" [ label = "boost_numpy\n(Boost::numpy)", shape = pentagon ];
+    "node91" -> "node92" [ style = dashed ] // boost_numpy -> boost_numpy310
+    "node97" [ label = "carla-client", shape = octagon ];
+    "node97" -> "node93"  // carla-client -> boost_python
+    "node115" [ label = "carla-example-client", shape = egg ];
+    "node115" -> "node97" [ style = dotted ] // carla-example-client -> carla-client
+    "node117" [ label = "carla-python-api", shape = box ];
+    "node117" -> "node97"  // carla-python-api -> carla-client
+    "node118" [ label = "carla-python-api-install", shape = box ];
+    "node118" -> "node117"  // carla-python-api-install -> carla-python-api
+    "node130" [ label = "carla-unreal-package", shape = box ];
+    "node130" -> "node117"  // carla-unreal-package -> carla-python-api
+    "node143" [ label = "package", shape = box ];
+    "node143" -> "node130"  // package -> carla-unreal-package
+    "node131" [ label = "carla-unreal-package-debug", shape = box ];
+    "node131" -> "node117"  // carla-unreal-package-debug -> carla-python-api
+    "node144" [ label = "package-debug", shape = box ];
+    "node144" -> "node131"  // package-debug -> carla-unreal-package-debug
+    "node132" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node132" -> "node117"  // carla-unreal-package-debuggame -> carla-python-api
+    "node145" [ label = "package-debuggame", shape = box ];
+    "node145" -> "node132"  // package-debuggame -> carla-unreal-package-debuggame
+    "node133" [ label = "carla-unreal-package-development", shape = box ];
+    "node133" -> "node117"  // carla-unreal-package-development -> carla-python-api
+    "node146" [ label = "package-development", shape = box ];
+    "node146" -> "node133"  // package-development -> carla-unreal-package-development
+    "node134" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node134" -> "node117"  // carla-unreal-package-shipping -> carla-python-api
+    "node147" [ label = "package-shipping", shape = box ];
+    "node147" -> "node134"  // package-shipping -> carla-unreal-package-shipping
+    "node135" [ label = "carla-unreal-package-test", shape = box ];
+    "node135" -> "node117"  // carla-unreal-package-test -> carla-python-api
+    "node148" [ label = "package-test", shape = box ];
+    "node148" -> "node135"  // package-test -> carla-unreal-package-test
+    "node125" [ label = "carla-unreal", shape = box ];
+    "node125" -> "node97"  // carla-unreal -> carla-client
+    "node129" [ label = "carla-unreal-editor", shape = box ];
+    "node129" -> "node125"  // carla-unreal-editor -> carla-unreal
+    "node130" [ label = "carla-unreal-package", shape = box ];
+    "node130" -> "node129"  // carla-unreal-package -> carla-unreal-editor
+    "node131" [ label = "carla-unreal-package-debug", shape = box ];
+    "node131" -> "node129"  // carla-unreal-package-debug -> carla-unreal-editor
+    "node132" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node132" -> "node129"  // carla-unreal-package-debuggame -> carla-unreal-editor
+    "node133" [ label = "carla-unreal-package-development", shape = box ];
+    "node133" -> "node129"  // carla-unreal-package-development -> carla-unreal-editor
+    "node134" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node134" -> "node129"  // carla-unreal-package-shipping -> carla-unreal-editor
+    "node135" [ label = "carla-unreal-package-test", shape = box ];
+    "node135" -> "node129"  // carla-unreal-package-test -> carla-unreal-editor
+    "node141" [ label = "launch", shape = box ];
+    "node141" -> "node129"  // launch -> carla-unreal-editor
+    "node129" [ label = "carla-unreal-editor", shape = box ];
+    "node129" -> "node97"  // carla-unreal-editor -> carla-client
+    "node117" [ label = "carla-python-api", shape = box ];
+    "node117" -> "node93"  // carla-python-api -> boost_python
+    "node125" [ label = "carla-unreal", shape = box ];
+    "node125" -> "node93"  // carla-unreal -> boost_python
+    "node129" [ label = "carla-unreal-editor", shape = box ];
+    "node129" -> "node93"  // carla-unreal-editor -> boost_python
+}

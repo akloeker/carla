@@ -1,0 +1,12 @@
+digraph "/usr/lib/x86_64-linux-gnu/librt.a" {
+node [
+  fontsize = "12"
+];
+    "node160" [ label = "/usr/lib/x86_64-linux-gnu/librt.a", shape = septagon ];
+    "node159" [ label = "spbenchsolver", shape = egg ];
+    "node159" -> "node160" [ style = dotted ] // spbenchsolver -> /usr/lib/x86_64-linux-gnu/librt.a
+    "node161" [ label = "spsolver", shape = egg ];
+    "node161" -> "node160" [ style = dotted ] // spsolver -> /usr/lib/x86_64-linux-gnu/librt.a
+    "node163" [ label = "test_sparseLU", shape = egg ];
+    "node163" -> "node160" [ style = dotted ] // test_sparseLU -> /usr/lib/x86_64-linux-gnu/librt.a
+}

@@ -1,0 +1,16 @@
+digraph "boost_thread" {
+node [
+  fontsize = "12"
+];
+    "node19" [ label = "boost_thread\n(Boost::thread)", shape = octagon ];
+    "node14" [ label = "boost_atomic\n(Boost::atomic)", shape = octagon ];
+    "node19" -> "node14"  // boost_thread -> boost_atomic
+    "node15" [ label = "boost_chrono\n(Boost::chrono)", shape = octagon ];
+    "node19" -> "node15"  // boost_thread -> boost_chrono
+    "node13" [ label = "boost_container\n(Boost::container)", shape = octagon ];
+    "node19" -> "node13"  // boost_thread -> boost_container
+    "node12" [ label = "boost_date_time\n(Boost::date_time)", shape = octagon ];
+    "node19" -> "node12"  // boost_thread -> boost_date_time
+    "node9" [ label = "boost_exception\n(Boost::exception)", shape = octagon ];
+    "node19" -> "node9"  // boost_thread -> boost_exception
+}

@@ -1,0 +1,8 @@
+digraph "boost_container" {
+node [
+  fontsize = "12"
+];
+    "node13" [ label = "boost_container\n(Boost::container)", shape = octagon ];
+    "node19" [ label = "boost_thread\n(Boost::thread)", shape = octagon ];
+    "node19" -> "node13"  // boost_thread -> boost_container
+}

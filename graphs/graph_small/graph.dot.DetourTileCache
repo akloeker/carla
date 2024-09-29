@@ -1,0 +1,8 @@
+digraph "DetourTileCache" {
+node [
+  fontsize = "12"
+];
+    "node2" [ label = "DetourTileCache\n(RecastNavigation::DetourTileCache)", shape = octagon ];
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node2" -> "node1"  // DetourTileCache -> Detour
+}

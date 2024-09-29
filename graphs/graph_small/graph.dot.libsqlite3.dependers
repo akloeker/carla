@@ -1,0 +1,40 @@
+digraph "libsqlite3" {
+node [
+  fontsize = "12"
+];
+    "node54" [ label = "libsqlite3", shape = octagon ];
+    "node52" [ label = "carla-unreal", shape = box ];
+    "node52" -> "node54"  // carla-unreal -> libsqlite3
+    "node55" [ label = "carla-unreal-editor", shape = box ];
+    "node55" -> "node52"  // carla-unreal-editor -> carla-unreal
+    "node56" [ label = "carla-unreal-package", shape = box ];
+    "node56" -> "node55"  // carla-unreal-package -> carla-unreal-editor
+    "node69" [ label = "package", shape = box ];
+    "node69" -> "node56"  // package -> carla-unreal-package
+    "node57" [ label = "carla-unreal-package-debug", shape = box ];
+    "node57" -> "node55"  // carla-unreal-package-debug -> carla-unreal-editor
+    "node70" [ label = "package-debug", shape = box ];
+    "node70" -> "node57"  // package-debug -> carla-unreal-package-debug
+    "node58" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node58" -> "node55"  // carla-unreal-package-debuggame -> carla-unreal-editor
+    "node71" [ label = "package-debuggame", shape = box ];
+    "node71" -> "node58"  // package-debuggame -> carla-unreal-package-debuggame
+    "node59" [ label = "carla-unreal-package-development", shape = box ];
+    "node59" -> "node55"  // carla-unreal-package-development -> carla-unreal-editor
+    "node72" [ label = "package-development", shape = box ];
+    "node72" -> "node59"  // package-development -> carla-unreal-package-development
+    "node60" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node60" -> "node55"  // carla-unreal-package-shipping -> carla-unreal-editor
+    "node73" [ label = "package-shipping", shape = box ];
+    "node73" -> "node60"  // package-shipping -> carla-unreal-package-shipping
+    "node61" [ label = "carla-unreal-package-test", shape = box ];
+    "node61" -> "node55"  // carla-unreal-package-test -> carla-unreal-editor
+    "node74" [ label = "package-test", shape = box ];
+    "node74" -> "node61"  // package-test -> carla-unreal-package-test
+    "node67" [ label = "launch", shape = box ];
+    "node67" -> "node55"  // launch -> carla-unreal-editor
+    "node55" [ label = "carla-unreal-editor", shape = box ];
+    "node55" -> "node54"  // carla-unreal-editor -> libsqlite3
+    "node78" [ label = "sqlite3", shape = egg ];
+    "node78" -> "node54" [ style = dotted ] // sqlite3 -> libsqlite3
+}

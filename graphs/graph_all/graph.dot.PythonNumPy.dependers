@@ -1,0 +1,10 @@
+digraph "Python::NumPy" {
+node [
+  fontsize = "12"
+];
+    "node94" [ label = "Python::NumPy", shape = pentagon ];
+    "node93" [ label = "boost_numpy310\n(Boost::numpy310)", shape = octagon ];
+    "node93" -> "node94"  // boost_numpy310 -> Python::NumPy
+    "node92" [ label = "boost_numpy\n(Boost::numpy)", shape = pentagon ];
+    "node92" -> "node93" [ style = dashed ] // boost_numpy -> boost_numpy310
+}

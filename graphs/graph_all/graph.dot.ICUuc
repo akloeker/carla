@@ -1,0 +1,8 @@
+digraph "ICU::uc" {
+node [
+  fontsize = "12"
+];
+    "node101" [ label = "ICU::uc", shape = septagon ];
+    "node102" [ label = "dl", shape = septagon ];
+    "node101" -> "node102" [ style = dashed ] // ICU::uc -> dl
+}

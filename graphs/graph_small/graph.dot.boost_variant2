@@ -1,0 +1,14 @@
+digraph "boost_variant2" {
+node [
+  fontsize = "12"
+];
+    "node53" [ label = "boost_variant2\n(Boost::variant2)", shape = pentagon ];
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node53" -> "node11" [ style = dashed ] // boost_variant2 -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node11" -> "node12" [ style = dashed ] // boost_assert -> boost_config
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node53" -> "node12" [ style = dashed ] // boost_variant2 -> boost_config
+    "node35" [ label = "boost_mp11\n(Boost::mp11)", shape = pentagon ];
+    "node53" -> "node35" [ style = dashed ] // boost_variant2 -> boost_mp11
+}

@@ -1,0 +1,12 @@
+digraph "carla-ros2-native-lib" {
+node [
+  fontsize = "12"
+];
+    "node129" [ label = "carla-ros2-native-lib", shape = box ];
+    "node130" [ label = "fastdds", shape = box ];
+    "node129" -> "node130"  // carla-ros2-native-lib -> fastdds
+    "node131" [ label = "fastcdr", shape = box ];
+    "node130" -> "node131"  // fastdds -> fastcdr
+    "node132" [ label = "foonathan_memory", shape = box ];
+    "node130" -> "node132"  // fastdds -> foonathan_memory
+}

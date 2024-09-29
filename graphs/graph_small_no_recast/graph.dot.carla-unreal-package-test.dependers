@@ -1,0 +1,8 @@
+digraph "carla-unreal-package-test" {
+node [
+  fontsize = "12"
+];
+    "node20" [ label = "carla-unreal-package-test", shape = box ];
+    "node30" [ label = "package-test", shape = box ];
+    "node30" -> "node20"  // package-test -> carla-unreal-package-test
+}

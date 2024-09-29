@@ -1,0 +1,10 @@
+digraph "carla-example-client" {
+node [
+  fontsize = "12"
+];
+    "node2" [ label = "carla-example-client", shape = egg ];
+    "node0" [ label = "carla-client", shape = octagon ];
+    "node2" -> "node0" [ style = dotted ] // carla-example-client -> carla-client
+    "node1" [ label = "rpc", shape = octagon ];
+    "node0" -> "node1"  // carla-client -> rpc
+}

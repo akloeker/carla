@@ -1,0 +1,70 @@
+digraph "rpc" {
+node [
+  fontsize = "12"
+];
+    "node1" [ label = "rpc", shape = octagon ];
+    "node0" [ label = "carla-client", shape = octagon ];
+    "node0" -> "node1"  // carla-client -> rpc
+    "node2" [ label = "carla-example-client", shape = egg ];
+    "node2" -> "node0" [ style = dotted ] // carla-example-client -> carla-client
+    "node4" [ label = "carla-python-api", shape = box ];
+    "node4" -> "node0"  // carla-python-api -> carla-client
+    "node5" [ label = "carla-python-api-install", shape = box ];
+    "node5" -> "node4"  // carla-python-api-install -> carla-python-api
+    "node15" [ label = "carla-unreal-package", shape = box ];
+    "node15" -> "node4"  // carla-unreal-package -> carla-python-api
+    "node25" [ label = "package", shape = box ];
+    "node25" -> "node15"  // package -> carla-unreal-package
+    "node16" [ label = "carla-unreal-package-debug", shape = box ];
+    "node16" -> "node4"  // carla-unreal-package-debug -> carla-python-api
+    "node26" [ label = "package-debug", shape = box ];
+    "node26" -> "node16"  // package-debug -> carla-unreal-package-debug
+    "node17" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node17" -> "node4"  // carla-unreal-package-debuggame -> carla-python-api
+    "node27" [ label = "package-debuggame", shape = box ];
+    "node27" -> "node17"  // package-debuggame -> carla-unreal-package-debuggame
+    "node18" [ label = "carla-unreal-package-development", shape = box ];
+    "node18" -> "node4"  // carla-unreal-package-development -> carla-python-api
+    "node28" [ label = "package-development", shape = box ];
+    "node28" -> "node18"  // package-development -> carla-unreal-package-development
+    "node19" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node19" -> "node4"  // carla-unreal-package-shipping -> carla-python-api
+    "node29" [ label = "package-shipping", shape = box ];
+    "node29" -> "node19"  // package-shipping -> carla-unreal-package-shipping
+    "node20" [ label = "carla-unreal-package-test", shape = box ];
+    "node20" -> "node4"  // carla-unreal-package-test -> carla-python-api
+    "node30" [ label = "package-test", shape = box ];
+    "node30" -> "node20"  // package-test -> carla-unreal-package-test
+    "node12" [ label = "carla-unreal", shape = box ];
+    "node12" -> "node0"  // carla-unreal -> carla-client
+    "node14" [ label = "carla-unreal-editor", shape = box ];
+    "node14" -> "node12"  // carla-unreal-editor -> carla-unreal
+    "node15" [ label = "carla-unreal-package", shape = box ];
+    "node15" -> "node14"  // carla-unreal-package -> carla-unreal-editor
+    "node16" [ label = "carla-unreal-package-debug", shape = box ];
+    "node16" -> "node14"  // carla-unreal-package-debug -> carla-unreal-editor
+    "node17" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node17" -> "node14"  // carla-unreal-package-debuggame -> carla-unreal-editor
+    "node18" [ label = "carla-unreal-package-development", shape = box ];
+    "node18" -> "node14"  // carla-unreal-package-development -> carla-unreal-editor
+    "node19" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node19" -> "node14"  // carla-unreal-package-shipping -> carla-unreal-editor
+    "node20" [ label = "carla-unreal-package-test", shape = box ];
+    "node20" -> "node14"  // carla-unreal-package-test -> carla-unreal-editor
+    "node23" [ label = "launch", shape = box ];
+    "node23" -> "node14"  // launch -> carla-unreal-editor
+    "node14" [ label = "carla-unreal-editor", shape = box ];
+    "node14" -> "node0"  // carla-unreal-editor -> carla-client
+    "node4" [ label = "carla-python-api", shape = box ];
+    "node4" -> "node1"  // carla-python-api -> rpc
+    "node11" [ label = "carla-server", shape = octagon ];
+    "node11" -> "node1"  // carla-server -> rpc
+    "node12" [ label = "carla-unreal", shape = box ];
+    "node12" -> "node11"  // carla-unreal -> carla-server
+    "node14" [ label = "carla-unreal-editor", shape = box ];
+    "node14" -> "node11"  // carla-unreal-editor -> carla-server
+    "node12" [ label = "carla-unreal", shape = box ];
+    "node12" -> "node1"  // carla-unreal -> rpc
+    "node14" [ label = "carla-unreal-editor", shape = box ];
+    "node14" -> "node1"  // carla-unreal-editor -> rpc
+}

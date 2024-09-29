@@ -1,0 +1,12 @@
+digraph "DebugUtils" {
+node [
+  fontsize = "12"
+];
+    "node0" [ label = "DebugUtils\n(RecastNavigation::DebugUtils)", shape = octagon ];
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node0" -> "node1"  // DebugUtils -> Detour
+    "node2" [ label = "DetourTileCache\n(RecastNavigation::DetourTileCache)", shape = octagon ];
+    "node0" -> "node2"  // DebugUtils -> DetourTileCache
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node2" -> "node1"  // DetourTileCache -> Detour
+}

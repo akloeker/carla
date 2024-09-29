@@ -1,0 +1,56 @@
+digraph "boost_mpl" {
+node [
+  fontsize = "12"
+];
+    "node28" [ label = "boost_mpl\n(Boost::mpl)", shape = pentagon ];
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node28" -> "node12" [ style = dashed ] // boost_mpl -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node28" -> "node13" [ style = dashed ] // boost_mpl -> boost_core
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node13" -> "node11" [ style = dashed ] // boost_core -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node11" -> "node12" [ style = dashed ] // boost_assert -> boost_config
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node13" -> "node12" [ style = dashed ] // boost_core -> boost_config
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node13" -> "node14" [ style = dashed ] // boost_core -> boost_static_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node14" -> "node12" [ style = dashed ] // boost_static_assert -> boost_config
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node13" -> "node15" [ style = dashed ] // boost_core -> boost_throw_exception
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node15" -> "node11" [ style = dashed ] // boost_throw_exception -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node15" -> "node12" [ style = dashed ] // boost_throw_exception -> boost_config
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node28" -> "node29" [ style = dashed ] // boost_mpl -> boost_predef
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node28" -> "node18" [ style = dashed ] // boost_mpl -> boost_preprocessor
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node28" -> "node14" [ style = dashed ] // boost_mpl -> boost_static_assert
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node28" -> "node19" [ style = dashed ] // boost_mpl -> boost_type_traits
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node19" -> "node12" [ style = dashed ] // boost_type_traits -> boost_config
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node19" -> "node14" [ style = dashed ] // boost_type_traits -> boost_static_assert
+    "node30" [ label = "boost_utility\n(Boost::utility)", shape = pentagon ];
+    "node28" -> "node30" [ style = dashed ] // boost_mpl -> boost_utility
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node30" -> "node12" [ style = dashed ] // boost_utility -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node30" -> "node13" [ style = dashed ] // boost_utility -> boost_core
+    "node31" [ label = "boost_io\n(Boost::io)", shape = pentagon ];
+    "node30" -> "node31" [ style = dashed ] // boost_utility -> boost_io
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node31" -> "node12" [ style = dashed ] // boost_io -> boost_config
+    "node18" [ label = "boost_preprocessor\n(Boost::preprocessor)", shape = pentagon ];
+    "node30" -> "node18" [ style = dashed ] // boost_utility -> boost_preprocessor
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node30" -> "node14" [ style = dashed ] // boost_utility -> boost_static_assert
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node30" -> "node15" [ style = dashed ] // boost_utility -> boost_throw_exception
+    "node19" [ label = "boost_type_traits\n(Boost::type_traits)", shape = pentagon ];
+    "node30" -> "node19" [ style = dashed ] // boost_utility -> boost_type_traits
+}

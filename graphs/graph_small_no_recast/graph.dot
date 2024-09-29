@@ -1,0 +1,98 @@
+digraph "CARLA" {
+node [
+  fontsize = "12"
+];
+subgraph clusterLegend {
+  label = "Legend";
+  color = black;
+  edge [ style = invis ];
+  legendNode0 [ label = "Executable", shape = egg ];
+  legendNode1 [ label = "Static Library", shape = octagon ];
+  legendNode2 [ label = "Shared Library", shape = doubleoctagon ];
+  legendNode3 [ label = "Module Library", shape = tripleoctagon ];
+  legendNode4 [ label = "Interface Library", shape = pentagon ];
+  legendNode5 [ label = "Object Library", shape = hexagon ];
+  legendNode6 [ label = "Unknown Library", shape = septagon ];
+  legendNode7 [ label = "Custom Target", shape = box ];
+  legendNode0 -> legendNode1 [ style = solid ];
+  legendNode0 -> legendNode2 [ style = solid ];
+  legendNode0 -> legendNode3;
+  legendNode1 -> legendNode4 [ label = "Interface", style = dashed ];
+  legendNode2 -> legendNode5 [ label = "Private", style = dotted ];
+  legendNode3 -> legendNode6 [ style = solid ];
+  legendNode0 -> legendNode7;
+}
+    "node0" [ label = "carla-client", shape = octagon ];
+    "node1" [ label = "rpc", shape = octagon ];
+    "node0" -> "node1"  // carla-client -> rpc
+    "node2" [ label = "carla-example-client", shape = egg ];
+    "node2" -> "node0" [ style = dotted ] // carla-example-client -> carla-client
+    "node3" [ label = "carla-help", shape = box ];
+    "node4" [ label = "carla-python-api", shape = box ];
+    "node4" -> "node0"  // carla-python-api -> carla-client
+    "node4" -> "node1"  // carla-python-api -> rpc
+    "node5" [ label = "carla-python-api-install", shape = box ];
+    "node5" -> "node4"  // carla-python-api-install -> carla-python-api
+    "node6" [ label = "carla-ros2-native", shape = box ];
+    "node7" [ label = "carla-ros2-native-lib", shape = box ];
+    "node8" [ label = "fastdds", shape = box ];
+    "node9" [ label = "fastcdr", shape = box ];
+    "node8" -> "node9"  // fastdds -> fastcdr
+    "node10" [ label = "foonathan_memory", shape = box ];
+    "node8" -> "node10"  // fastdds -> foonathan_memory
+    "node7" -> "node8"  // carla-ros2-native-lib -> fastdds
+    "node6" -> "node7"  // carla-ros2-native -> carla-ros2-native-lib
+    "node11" [ label = "carla-server", shape = octagon ];
+    "node11" -> "node6"  // carla-server -> carla-ros2-native
+    "node11" -> "node1"  // carla-server -> rpc
+    "node12" [ label = "carla-unreal", shape = box ];
+    "node12" -> "node0"  // carla-unreal -> carla-client
+    "node12" -> "node11"  // carla-unreal -> carla-server
+    "node13" [ label = "carla-unreal-configure", shape = box ];
+    "node12" -> "node13"  // carla-unreal -> carla-unreal-configure
+    "node12" -> "node1"  // carla-unreal -> rpc
+    "node14" [ label = "carla-unreal-editor", shape = box ];
+    "node14" -> "node0"  // carla-unreal-editor -> carla-client
+    "node14" -> "node11"  // carla-unreal-editor -> carla-server
+    "node14" -> "node12"  // carla-unreal-editor -> carla-unreal
+    "node14" -> "node13"  // carla-unreal-editor -> carla-unreal-configure
+    "node14" -> "node1"  // carla-unreal-editor -> rpc
+    "node15" [ label = "carla-unreal-package", shape = box ];
+    "node15" -> "node4"  // carla-unreal-package -> carla-python-api
+    "node15" -> "node14"  // carla-unreal-package -> carla-unreal-editor
+    "node16" [ label = "carla-unreal-package-debug", shape = box ];
+    "node16" -> "node4"  // carla-unreal-package-debug -> carla-python-api
+    "node16" -> "node14"  // carla-unreal-package-debug -> carla-unreal-editor
+    "node17" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node17" -> "node4"  // carla-unreal-package-debuggame -> carla-python-api
+    "node17" -> "node14"  // carla-unreal-package-debuggame -> carla-unreal-editor
+    "node18" [ label = "carla-unreal-package-development", shape = box ];
+    "node18" -> "node4"  // carla-unreal-package-development -> carla-python-api
+    "node18" -> "node14"  // carla-unreal-package-development -> carla-unreal-editor
+    "node19" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node19" -> "node4"  // carla-unreal-package-shipping -> carla-python-api
+    "node19" -> "node14"  // carla-unreal-package-shipping -> carla-unreal-editor
+    "node20" [ label = "carla-unreal-package-test", shape = box ];
+    "node20" -> "node4"  // carla-unreal-package-test -> carla-python-api
+    "node20" -> "node14"  // carla-unreal-package-test -> carla-unreal-editor
+    "node21" [ label = "check-unreal-content", shape = box ];
+    "node22" [ label = "demos", shape = box ];
+    "node23" [ label = "launch", shape = box ];
+    "node23" -> "node14"  // launch -> carla-unreal-editor
+    "node23" -> "node21"  // launch -> check-unreal-content
+    "node24" [ label = "launch-only", shape = box ];
+    "node24" -> "node21"  // launch-only -> check-unreal-content
+    "node25" [ label = "package", shape = box ];
+    "node25" -> "node15"  // package -> carla-unreal-package
+    "node26" [ label = "package-debug", shape = box ];
+    "node26" -> "node16"  // package-debug -> carla-unreal-package-debug
+    "node27" [ label = "package-debuggame", shape = box ];
+    "node27" -> "node17"  // package-debuggame -> carla-unreal-package-debuggame
+    "node28" [ label = "package-development", shape = box ];
+    "node28" -> "node18"  // package-development -> carla-unreal-package-development
+    "node29" [ label = "package-shipping", shape = box ];
+    "node29" -> "node19"  // package-shipping -> carla-unreal-package-shipping
+    "node30" [ label = "package-test", shape = box ];
+    "node30" -> "node20"  // package-test -> carla-unreal-package-test
+    "node31" [ label = "uninstall", shape = box ];
+}

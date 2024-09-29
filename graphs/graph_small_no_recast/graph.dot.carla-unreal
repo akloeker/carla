@@ -1,0 +1,28 @@
+digraph "carla-unreal" {
+node [
+  fontsize = "12"
+];
+    "node12" [ label = "carla-unreal", shape = box ];
+    "node0" [ label = "carla-client", shape = octagon ];
+    "node12" -> "node0"  // carla-unreal -> carla-client
+    "node1" [ label = "rpc", shape = octagon ];
+    "node0" -> "node1"  // carla-client -> rpc
+    "node11" [ label = "carla-server", shape = octagon ];
+    "node12" -> "node11"  // carla-unreal -> carla-server
+    "node6" [ label = "carla-ros2-native", shape = box ];
+    "node11" -> "node6"  // carla-server -> carla-ros2-native
+    "node7" [ label = "carla-ros2-native-lib", shape = box ];
+    "node6" -> "node7"  // carla-ros2-native -> carla-ros2-native-lib
+    "node8" [ label = "fastdds", shape = box ];
+    "node7" -> "node8"  // carla-ros2-native-lib -> fastdds
+    "node9" [ label = "fastcdr", shape = box ];
+    "node8" -> "node9"  // fastdds -> fastcdr
+    "node10" [ label = "foonathan_memory", shape = box ];
+    "node8" -> "node10"  // fastdds -> foonathan_memory
+    "node1" [ label = "rpc", shape = octagon ];
+    "node11" -> "node1"  // carla-server -> rpc
+    "node13" [ label = "carla-unreal-configure", shape = box ];
+    "node12" -> "node13"  // carla-unreal -> carla-unreal-configure
+    "node1" [ label = "rpc", shape = octagon ];
+    "node12" -> "node1"  // carla-unreal -> rpc
+}

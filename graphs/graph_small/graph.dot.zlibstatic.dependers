@@ -1,0 +1,70 @@
+digraph "zlibstatic" {
+node [
+  fontsize = "12"
+];
+    "node11" [ label = "zlibstatic", shape = octagon ];
+    "node9" [ label = "carla-client", shape = octagon ];
+    "node9" -> "node11"  // carla-client -> zlibstatic
+    "node12" [ label = "carla-example-client", shape = egg ];
+    "node12" -> "node9" [ style = dotted ] // carla-example-client -> carla-client
+    "node14" [ label = "carla-python-api", shape = box ];
+    "node14" -> "node9"  // carla-python-api -> carla-client
+    "node15" [ label = "carla-python-api-install", shape = box ];
+    "node15" -> "node14"  // carla-python-api-install -> carla-python-api
+    "node25" [ label = "carla-unreal-package", shape = box ];
+    "node25" -> "node14"  // carla-unreal-package -> carla-python-api
+    "node38" [ label = "package", shape = box ];
+    "node38" -> "node25"  // package -> carla-unreal-package
+    "node26" [ label = "carla-unreal-package-debug", shape = box ];
+    "node26" -> "node14"  // carla-unreal-package-debug -> carla-python-api
+    "node39" [ label = "package-debug", shape = box ];
+    "node39" -> "node26"  // package-debug -> carla-unreal-package-debug
+    "node27" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node27" -> "node14"  // carla-unreal-package-debuggame -> carla-python-api
+    "node40" [ label = "package-debuggame", shape = box ];
+    "node40" -> "node27"  // package-debuggame -> carla-unreal-package-debuggame
+    "node28" [ label = "carla-unreal-package-development", shape = box ];
+    "node28" -> "node14"  // carla-unreal-package-development -> carla-python-api
+    "node41" [ label = "package-development", shape = box ];
+    "node41" -> "node28"  // package-development -> carla-unreal-package-development
+    "node29" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node29" -> "node14"  // carla-unreal-package-shipping -> carla-python-api
+    "node42" [ label = "package-shipping", shape = box ];
+    "node42" -> "node29"  // package-shipping -> carla-unreal-package-shipping
+    "node30" [ label = "carla-unreal-package-test", shape = box ];
+    "node30" -> "node14"  // carla-unreal-package-test -> carla-python-api
+    "node43" [ label = "package-test", shape = box ];
+    "node43" -> "node30"  // package-test -> carla-unreal-package-test
+    "node22" [ label = "carla-unreal", shape = box ];
+    "node22" -> "node9"  // carla-unreal -> carla-client
+    "node24" [ label = "carla-unreal-editor", shape = box ];
+    "node24" -> "node22"  // carla-unreal-editor -> carla-unreal
+    "node25" [ label = "carla-unreal-package", shape = box ];
+    "node25" -> "node24"  // carla-unreal-package -> carla-unreal-editor
+    "node26" [ label = "carla-unreal-package-debug", shape = box ];
+    "node26" -> "node24"  // carla-unreal-package-debug -> carla-unreal-editor
+    "node27" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node27" -> "node24"  // carla-unreal-package-debuggame -> carla-unreal-editor
+    "node28" [ label = "carla-unreal-package-development", shape = box ];
+    "node28" -> "node24"  // carla-unreal-package-development -> carla-unreal-editor
+    "node29" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node29" -> "node24"  // carla-unreal-package-shipping -> carla-unreal-editor
+    "node30" [ label = "carla-unreal-package-test", shape = box ];
+    "node30" -> "node24"  // carla-unreal-package-test -> carla-unreal-editor
+    "node36" [ label = "launch", shape = box ];
+    "node36" -> "node24"  // launch -> carla-unreal-editor
+    "node24" [ label = "carla-unreal-editor", shape = box ];
+    "node24" -> "node9"  // carla-unreal-editor -> carla-client
+    "node14" [ label = "carla-python-api", shape = box ];
+    "node14" -> "node11"  // carla-python-api -> zlibstatic
+    "node21" [ label = "carla-server", shape = octagon ];
+    "node21" -> "node11"  // carla-server -> zlibstatic
+    "node22" [ label = "carla-unreal", shape = box ];
+    "node22" -> "node21"  // carla-unreal -> carla-server
+    "node24" [ label = "carla-unreal-editor", shape = box ];
+    "node24" -> "node21"  // carla-unreal-editor -> carla-server
+    "node22" [ label = "carla-unreal", shape = box ];
+    "node22" -> "node11"  // carla-unreal -> zlibstatic
+    "node24" [ label = "carla-unreal-editor", shape = box ];
+    "node24" -> "node11"  // carla-unreal-editor -> zlibstatic
+}

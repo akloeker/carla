@@ -1,0 +1,66 @@
+digraph "png_genfiles" {
+node [
+  fontsize = "12"
+];
+    "node108" [ label = "png_genfiles", shape = box ];
+    "node109" [ label = "png_gensym", shape = box ];
+    "node108" -> "node109"  // png_genfiles -> png_gensym
+    "node110" [ label = "png_scripts_sym_out", shape = box ];
+    "node109" -> "node110"  // png_gensym -> png_scripts_sym_out
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node110" -> "node111"  // png_scripts_sym_out -> pnglibconf_c
+    "node112" [ label = "pnglibconf_h", shape = box ];
+    "node110" -> "node112"  // png_scripts_sym_out -> pnglibconf_h
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node112" -> "node111"  // pnglibconf_h -> pnglibconf_c
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node112" -> "node113"  // pnglibconf_h -> pnglibconf_out
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node113" -> "node111"  // pnglibconf_out -> pnglibconf_c
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node110" -> "node113"  // png_scripts_sym_out -> pnglibconf_out
+    "node114" [ label = "png_genvers", shape = box ];
+    "node108" -> "node114"  // png_genfiles -> png_genvers
+    "node115" [ label = "png_scripts_vers_out", shape = box ];
+    "node114" -> "node115"  // png_genvers -> png_scripts_vers_out
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node115" -> "node111"  // png_scripts_vers_out -> pnglibconf_c
+    "node112" [ label = "pnglibconf_h", shape = box ];
+    "node115" -> "node112"  // png_scripts_vers_out -> pnglibconf_h
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node115" -> "node113"  // png_scripts_vers_out -> pnglibconf_out
+    "node116" [ label = "png_scripts_intprefix_out", shape = box ];
+    "node108" -> "node116"  // png_genfiles -> png_scripts_intprefix_out
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node116" -> "node111"  // png_scripts_intprefix_out -> pnglibconf_c
+    "node112" [ label = "pnglibconf_h", shape = box ];
+    "node116" -> "node112"  // png_scripts_intprefix_out -> pnglibconf_h
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node116" -> "node113"  // png_scripts_intprefix_out -> pnglibconf_out
+    "node117" [ label = "png_scripts_pnglibconf_c", shape = box ];
+    "node108" -> "node117"  // png_genfiles -> png_scripts_pnglibconf_c
+    "node118" [ label = "png_scripts_prefix_out", shape = box ];
+    "node108" -> "node118"  // png_genfiles -> png_scripts_prefix_out
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node118" -> "node111"  // png_scripts_prefix_out -> pnglibconf_c
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node118" -> "node113"  // png_scripts_prefix_out -> pnglibconf_out
+    "node110" [ label = "png_scripts_sym_out", shape = box ];
+    "node108" -> "node110"  // png_genfiles -> png_scripts_sym_out
+    "node119" [ label = "png_scripts_symbols_chk", shape = box ];
+    "node108" -> "node119"  // png_genfiles -> png_scripts_symbols_chk
+    "node120" [ label = "png_scripts_symbols_out", shape = box ];
+    "node119" -> "node120"  // png_scripts_symbols_chk -> png_scripts_symbols_out
+    "node120" [ label = "png_scripts_symbols_out", shape = box ];
+    "node108" -> "node120"  // png_genfiles -> png_scripts_symbols_out
+    "node115" [ label = "png_scripts_vers_out", shape = box ];
+    "node108" -> "node115"  // png_genfiles -> png_scripts_vers_out
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node108" -> "node111"  // png_genfiles -> pnglibconf_c
+    "node112" [ label = "pnglibconf_h", shape = box ];
+    "node108" -> "node112"  // png_genfiles -> pnglibconf_h
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node108" -> "node113"  // png_genfiles -> pnglibconf_out
+    "node121" [ label = "pngprefix_h", shape = box ];
+    "node108" -> "node121"  // png_genfiles -> pngprefix_h
+}

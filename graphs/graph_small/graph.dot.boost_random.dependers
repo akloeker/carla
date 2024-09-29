@@ -1,0 +1,10 @@
+digraph "boost_random" {
+node [
+  fontsize = "12"
+];
+    "node17" [ label = "boost_random\n(Boost::random)", shape = octagon ];
+    "node20" [ label = "boost_graph\n(Boost::graph)", shape = octagon ];
+    "node20" -> "node17"  // boost_graph -> boost_random
+    "node22" [ label = "boost_python310\n(Boost::python310)", shape = octagon ];
+    "node22" -> "node20" [ style = dotted ] // boost_python310 -> boost_graph
+}

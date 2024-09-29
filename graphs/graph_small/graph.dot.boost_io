@@ -1,0 +1,8 @@
+digraph "boost_io" {
+node [
+  fontsize = "12"
+];
+    "node31" [ label = "boost_io\n(Boost::io)", shape = pentagon ];
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node31" -> "node12" [ style = dashed ] // boost_io -> boost_config
+}

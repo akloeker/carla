@@ -1,0 +1,8 @@
+digraph "pnglibconf_out" {
+node [
+  fontsize = "12"
+];
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node113" -> "node111"  // pnglibconf_out -> pnglibconf_c
+}

@@ -1,0 +1,8 @@
+digraph "eigen_blas_static" {
+node [
+  fontsize = "12"
+];
+    "node8" [ label = "eigen_blas_static", shape = octagon ];
+    "node6" [ label = "blas", shape = box ];
+    "node6" -> "node8"  // blas -> eigen_blas_static
+}

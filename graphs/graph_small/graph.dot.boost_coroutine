@@ -1,0 +1,10 @@
+digraph "boost_coroutine" {
+node [
+  fontsize = "12"
+];
+    "node11" [ label = "boost_coroutine\n(Boost::coroutine)", shape = octagon ];
+    "node10" [ label = "boost_context\n(Boost::context)", shape = octagon ];
+    "node11" -> "node10"  // boost_coroutine -> boost_context
+    "node9" [ label = "boost_exception\n(Boost::exception)", shape = octagon ];
+    "node11" -> "node9"  // boost_coroutine -> boost_exception
+}

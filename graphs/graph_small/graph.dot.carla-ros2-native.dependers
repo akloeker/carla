@@ -1,0 +1,40 @@
+digraph "carla-ros2-native" {
+node [
+  fontsize = "12"
+];
+    "node12" [ label = "carla-ros2-native", shape = box ];
+    "node17" [ label = "carla-server", shape = octagon ];
+    "node17" -> "node12"  // carla-server -> carla-ros2-native
+    "node18" [ label = "carla-unreal", shape = box ];
+    "node18" -> "node17"  // carla-unreal -> carla-server
+    "node20" [ label = "carla-unreal-editor", shape = box ];
+    "node20" -> "node18"  // carla-unreal-editor -> carla-unreal
+    "node21" [ label = "carla-unreal-package", shape = box ];
+    "node21" -> "node20"  // carla-unreal-package -> carla-unreal-editor
+    "node31" [ label = "package", shape = box ];
+    "node31" -> "node21"  // package -> carla-unreal-package
+    "node22" [ label = "carla-unreal-package-debug", shape = box ];
+    "node22" -> "node20"  // carla-unreal-package-debug -> carla-unreal-editor
+    "node32" [ label = "package-debug", shape = box ];
+    "node32" -> "node22"  // package-debug -> carla-unreal-package-debug
+    "node23" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node23" -> "node20"  // carla-unreal-package-debuggame -> carla-unreal-editor
+    "node33" [ label = "package-debuggame", shape = box ];
+    "node33" -> "node23"  // package-debuggame -> carla-unreal-package-debuggame
+    "node24" [ label = "carla-unreal-package-development", shape = box ];
+    "node24" -> "node20"  // carla-unreal-package-development -> carla-unreal-editor
+    "node34" [ label = "package-development", shape = box ];
+    "node34" -> "node24"  // package-development -> carla-unreal-package-development
+    "node25" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node25" -> "node20"  // carla-unreal-package-shipping -> carla-unreal-editor
+    "node35" [ label = "package-shipping", shape = box ];
+    "node35" -> "node25"  // package-shipping -> carla-unreal-package-shipping
+    "node26" [ label = "carla-unreal-package-test", shape = box ];
+    "node26" -> "node20"  // carla-unreal-package-test -> carla-unreal-editor
+    "node36" [ label = "package-test", shape = box ];
+    "node36" -> "node26"  // package-test -> carla-unreal-package-test
+    "node29" [ label = "launch", shape = box ];
+    "node29" -> "node20"  // launch -> carla-unreal-editor
+    "node20" [ label = "carla-unreal-editor", shape = box ];
+    "node20" -> "node17"  // carla-unreal-editor -> carla-server
+}

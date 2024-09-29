@@ -1,0 +1,8 @@
+digraph "boost_date_time" {
+node [
+  fontsize = "12"
+];
+    "node12" [ label = "boost_date_time\n(Boost::date_time)", shape = octagon ];
+    "node19" [ label = "boost_thread\n(Boost::thread)", shape = octagon ];
+    "node19" -> "node12"  // boost_thread -> boost_date_time
+}

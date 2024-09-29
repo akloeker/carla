@@ -1,0 +1,8 @@
+digraph "boost_wserialization" {
+node [
+  fontsize = "12"
+];
+    "node23" [ label = "boost_wserialization\n(Boost::wserialization)", shape = octagon ];
+    "node18" [ label = "boost_serialization\n(Boost::serialization)", shape = octagon ];
+    "node23" -> "node18"  // boost_wserialization -> boost_serialization
+}

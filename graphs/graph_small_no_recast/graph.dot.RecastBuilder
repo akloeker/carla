@@ -1,0 +1,26 @@
+digraph "RecastBuilder" {
+node [
+  fontsize = "12"
+];
+    "node5" [ label = "RecastBuilder", shape = egg ];
+    "node0" [ label = "DebugUtils\n(RecastNavigation::DebugUtils)", shape = octagon ];
+    "node5" -> "node0" [ style = dotted ] // RecastBuilder -> DebugUtils
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node0" -> "node1"  // DebugUtils -> Detour
+    "node2" [ label = "DetourTileCache\n(RecastNavigation::DetourTileCache)", shape = octagon ];
+    "node0" -> "node2"  // DebugUtils -> DetourTileCache
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node2" -> "node1"  // DetourTileCache -> Detour
+    "node3" [ label = "Recast\n(RecastNavigation::Recast)", shape = octagon ];
+    "node0" -> "node3"  // DebugUtils -> Recast
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node5" -> "node1" [ style = dotted ] // RecastBuilder -> Detour
+    "node4" [ label = "DetourCrowd\n(RecastNavigation::DetourCrowd)", shape = octagon ];
+    "node5" -> "node4" [ style = dotted ] // RecastBuilder -> DetourCrowd
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node4" -> "node1"  // DetourCrowd -> Detour
+    "node2" [ label = "DetourTileCache\n(RecastNavigation::DetourTileCache)", shape = octagon ];
+    "node5" -> "node2" [ style = dotted ] // RecastBuilder -> DetourTileCache
+    "node3" [ label = "Recast\n(RecastNavigation::Recast)", shape = octagon ];
+    "node5" -> "node3" [ style = dotted ] // RecastBuilder -> Recast
+}

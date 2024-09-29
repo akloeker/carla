@@ -1,0 +1,10 @@
+digraph "fastdds" {
+node [
+  fontsize = "12"
+];
+    "node14" [ label = "fastdds", shape = box ];
+    "node15" [ label = "fastcdr", shape = box ];
+    "node14" -> "node15"  // fastdds -> fastcdr
+    "node16" [ label = "foonathan_memory", shape = box ];
+    "node14" -> "node16"  // fastdds -> foonathan_memory
+}

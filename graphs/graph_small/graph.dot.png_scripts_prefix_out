@@ -1,0 +1,12 @@
+digraph "png_scripts_prefix_out" {
+node [
+  fontsize = "12"
+];
+    "node36" [ label = "png_scripts_prefix_out", shape = box ];
+    "node29" [ label = "pnglibconf_c", shape = box ];
+    "node36" -> "node29"  // png_scripts_prefix_out -> pnglibconf_c
+    "node31" [ label = "pnglibconf_out", shape = box ];
+    "node36" -> "node31"  // png_scripts_prefix_out -> pnglibconf_out
+    "node29" [ label = "pnglibconf_c", shape = box ];
+    "node31" -> "node29"  // pnglibconf_out -> pnglibconf_c
+}

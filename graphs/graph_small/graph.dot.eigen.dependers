@@ -1,0 +1,38 @@
+digraph "eigen" {
+node [
+  fontsize = "12"
+];
+    "node127" [ label = "eigen\n(Eigen3::Eigen)", shape = pentagon ];
+    "node125" [ label = "carla-unreal", shape = box ];
+    "node125" -> "node127"  // carla-unreal -> eigen
+    "node129" [ label = "carla-unreal-editor", shape = box ];
+    "node129" -> "node125"  // carla-unreal-editor -> carla-unreal
+    "node130" [ label = "carla-unreal-package", shape = box ];
+    "node130" -> "node129"  // carla-unreal-package -> carla-unreal-editor
+    "node143" [ label = "package", shape = box ];
+    "node143" -> "node130"  // package -> carla-unreal-package
+    "node131" [ label = "carla-unreal-package-debug", shape = box ];
+    "node131" -> "node129"  // carla-unreal-package-debug -> carla-unreal-editor
+    "node144" [ label = "package-debug", shape = box ];
+    "node144" -> "node131"  // package-debug -> carla-unreal-package-debug
+    "node132" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node132" -> "node129"  // carla-unreal-package-debuggame -> carla-unreal-editor
+    "node145" [ label = "package-debuggame", shape = box ];
+    "node145" -> "node132"  // package-debuggame -> carla-unreal-package-debuggame
+    "node133" [ label = "carla-unreal-package-development", shape = box ];
+    "node133" -> "node129"  // carla-unreal-package-development -> carla-unreal-editor
+    "node146" [ label = "package-development", shape = box ];
+    "node146" -> "node133"  // package-development -> carla-unreal-package-development
+    "node134" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node134" -> "node129"  // carla-unreal-package-shipping -> carla-unreal-editor
+    "node147" [ label = "package-shipping", shape = box ];
+    "node147" -> "node134"  // package-shipping -> carla-unreal-package-shipping
+    "node135" [ label = "carla-unreal-package-test", shape = box ];
+    "node135" -> "node129"  // carla-unreal-package-test -> carla-unreal-editor
+    "node148" [ label = "package-test", shape = box ];
+    "node148" -> "node135"  // package-test -> carla-unreal-package-test
+    "node141" [ label = "launch", shape = box ];
+    "node141" -> "node129"  // launch -> carla-unreal-editor
+    "node129" [ label = "carla-unreal-editor", shape = box ];
+    "node129" -> "node127"  // carla-unreal-editor -> eigen
+}

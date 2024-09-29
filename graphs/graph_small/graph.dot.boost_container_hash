@@ -1,0 +1,14 @@
+digraph "boost_container_hash" {
+node [
+  fontsize = "12"
+];
+    "node33" [ label = "boost_container_hash\n(Boost::container_hash)", shape = pentagon ];
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node33" -> "node12" [ style = dashed ] // boost_container_hash -> boost_config
+    "node34" [ label = "boost_describe\n(Boost::describe)", shape = pentagon ];
+    "node33" -> "node34" [ style = dashed ] // boost_container_hash -> boost_describe
+    "node35" [ label = "boost_mp11\n(Boost::mp11)", shape = pentagon ];
+    "node34" -> "node35" [ style = dashed ] // boost_describe -> boost_mp11
+    "node35" [ label = "boost_mp11\n(Boost::mp11)", shape = pentagon ];
+    "node33" -> "node35" [ style = dashed ] // boost_container_hash -> boost_mp11
+}

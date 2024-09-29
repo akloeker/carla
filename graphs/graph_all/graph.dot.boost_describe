@@ -1,0 +1,8 @@
+digraph "boost_describe" {
+node [
+  fontsize = "12"
+];
+    "node34" [ label = "boost_describe\n(Boost::describe)", shape = pentagon ];
+    "node35" [ label = "boost_mp11\n(Boost::mp11)", shape = pentagon ];
+    "node34" -> "node35" [ style = dashed ] // boost_describe -> boost_mp11
+}

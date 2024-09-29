@@ -1,0 +1,8 @@
+digraph "boost_context" {
+node [
+  fontsize = "12"
+];
+    "node10" [ label = "boost_context\n(Boost::context)", shape = octagon ];
+    "node11" [ label = "boost_coroutine\n(Boost::coroutine)", shape = octagon ];
+    "node11" -> "node10"  // boost_coroutine -> boost_context
+}

@@ -1,0 +1,8 @@
+digraph "carla-unreal-package-shipping" {
+node [
+  fontsize = "12"
+];
+    "node19" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node29" [ label = "package-shipping", shape = box ];
+    "node29" -> "node19"  // package-shipping -> carla-unreal-package-shipping
+}

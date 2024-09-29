@@ -1,0 +1,12 @@
+digraph "boost_python310" {
+node [
+  fontsize = "12"
+];
+    "node22" [ label = "boost_python310\n(Boost::python310)", shape = octagon ];
+    "node20" [ label = "boost_graph\n(Boost::graph)", shape = octagon ];
+    "node22" -> "node20" [ style = dotted ] // boost_python310 -> boost_graph
+    "node17" [ label = "boost_random\n(Boost::random)", shape = octagon ];
+    "node20" -> "node17"  // boost_graph -> boost_random
+    "node18" [ label = "boost_serialization\n(Boost::serialization)", shape = octagon ];
+    "node20" -> "node18"  // boost_graph -> boost_serialization
+}

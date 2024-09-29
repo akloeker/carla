@@ -1,0 +1,26 @@
+digraph "carla-server" {
+node [
+  fontsize = "12"
+];
+    "node17" [ label = "carla-server", shape = octagon ];
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node17" -> "node1"  // carla-server -> Detour
+    "node4" [ label = "DetourCrowd\n(RecastNavigation::DetourCrowd)", shape = octagon ];
+    "node17" -> "node4"  // carla-server -> DetourCrowd
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node4" -> "node1"  // DetourCrowd -> Detour
+    "node3" [ label = "Recast\n(RecastNavigation::Recast)", shape = octagon ];
+    "node17" -> "node3"  // carla-server -> Recast
+    "node12" [ label = "carla-ros2-native", shape = box ];
+    "node17" -> "node12"  // carla-server -> carla-ros2-native
+    "node13" [ label = "carla-ros2-native-lib", shape = box ];
+    "node12" -> "node13"  // carla-ros2-native -> carla-ros2-native-lib
+    "node14" [ label = "fastdds", shape = box ];
+    "node13" -> "node14"  // carla-ros2-native-lib -> fastdds
+    "node15" [ label = "fastcdr", shape = box ];
+    "node14" -> "node15"  // fastdds -> fastcdr
+    "node16" [ label = "foonathan_memory", shape = box ];
+    "node14" -> "node16"  // fastdds -> foonathan_memory
+    "node7" [ label = "rpc", shape = octagon ];
+    "node17" -> "node7"  // carla-server -> rpc
+}

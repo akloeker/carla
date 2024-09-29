@@ -1,0 +1,92 @@
+digraph "Detour" {
+node [
+  fontsize = "12"
+];
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node0" [ label = "DebugUtils\n(RecastNavigation::DebugUtils)", shape = octagon ];
+    "node0" -> "node1"  // DebugUtils -> Detour
+    "node5" [ label = "RecastBuilder", shape = egg ];
+    "node5" -> "node0" [ style = dotted ] // RecastBuilder -> DebugUtils
+    "node134" [ label = "carla-unreal", shape = box ];
+    "node134" -> "node5"  // carla-unreal -> RecastBuilder
+    "node138" [ label = "carla-unreal-editor", shape = box ];
+    "node138" -> "node134"  // carla-unreal-editor -> carla-unreal
+    "node139" [ label = "carla-unreal-package", shape = box ];
+    "node139" -> "node138"  // carla-unreal-package -> carla-unreal-editor
+    "node152" [ label = "package", shape = box ];
+    "node152" -> "node139"  // package -> carla-unreal-package
+    "node140" [ label = "carla-unreal-package-debug", shape = box ];
+    "node140" -> "node138"  // carla-unreal-package-debug -> carla-unreal-editor
+    "node153" [ label = "package-debug", shape = box ];
+    "node153" -> "node140"  // package-debug -> carla-unreal-package-debug
+    "node141" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node141" -> "node138"  // carla-unreal-package-debuggame -> carla-unreal-editor
+    "node154" [ label = "package-debuggame", shape = box ];
+    "node154" -> "node141"  // package-debuggame -> carla-unreal-package-debuggame
+    "node142" [ label = "carla-unreal-package-development", shape = box ];
+    "node142" -> "node138"  // carla-unreal-package-development -> carla-unreal-editor
+    "node155" [ label = "package-development", shape = box ];
+    "node155" -> "node142"  // package-development -> carla-unreal-package-development
+    "node143" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node143" -> "node138"  // carla-unreal-package-shipping -> carla-unreal-editor
+    "node156" [ label = "package-shipping", shape = box ];
+    "node156" -> "node143"  // package-shipping -> carla-unreal-package-shipping
+    "node144" [ label = "carla-unreal-package-test", shape = box ];
+    "node144" -> "node138"  // carla-unreal-package-test -> carla-unreal-editor
+    "node157" [ label = "package-test", shape = box ];
+    "node157" -> "node144"  // package-test -> carla-unreal-package-test
+    "node150" [ label = "launch", shape = box ];
+    "node150" -> "node138"  // launch -> carla-unreal-editor
+    "node138" [ label = "carla-unreal-editor", shape = box ];
+    "node138" -> "node5"  // carla-unreal-editor -> RecastBuilder
+    "node2" [ label = "DetourTileCache\n(RecastNavigation::DetourTileCache)", shape = octagon ];
+    "node2" -> "node1"  // DetourTileCache -> Detour
+    "node0" [ label = "DebugUtils\n(RecastNavigation::DebugUtils)", shape = octagon ];
+    "node0" -> "node2"  // DebugUtils -> DetourTileCache
+    "node5" [ label = "RecastBuilder", shape = egg ];
+    "node5" -> "node2" [ style = dotted ] // RecastBuilder -> DetourTileCache
+    "node4" [ label = "DetourCrowd\n(RecastNavigation::DetourCrowd)", shape = octagon ];
+    "node4" -> "node1"  // DetourCrowd -> Detour
+    "node5" [ label = "RecastBuilder", shape = egg ];
+    "node5" -> "node4" [ style = dotted ] // RecastBuilder -> DetourCrowd
+    "node104" [ label = "carla-client", shape = octagon ];
+    "node104" -> "node4"  // carla-client -> DetourCrowd
+    "node124" [ label = "carla-example-client", shape = egg ];
+    "node124" -> "node104" [ style = dotted ] // carla-example-client -> carla-client
+    "node126" [ label = "carla-python-api", shape = box ];
+    "node126" -> "node104"  // carla-python-api -> carla-client
+    "node127" [ label = "carla-python-api-install", shape = box ];
+    "node127" -> "node126"  // carla-python-api-install -> carla-python-api
+    "node139" [ label = "carla-unreal-package", shape = box ];
+    "node139" -> "node126"  // carla-unreal-package -> carla-python-api
+    "node140" [ label = "carla-unreal-package-debug", shape = box ];
+    "node140" -> "node126"  // carla-unreal-package-debug -> carla-python-api
+    "node141" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node141" -> "node126"  // carla-unreal-package-debuggame -> carla-python-api
+    "node142" [ label = "carla-unreal-package-development", shape = box ];
+    "node142" -> "node126"  // carla-unreal-package-development -> carla-python-api
+    "node143" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node143" -> "node126"  // carla-unreal-package-shipping -> carla-python-api
+    "node144" [ label = "carla-unreal-package-test", shape = box ];
+    "node144" -> "node126"  // carla-unreal-package-test -> carla-python-api
+    "node134" [ label = "carla-unreal", shape = box ];
+    "node134" -> "node104"  // carla-unreal -> carla-client
+    "node138" [ label = "carla-unreal-editor", shape = box ];
+    "node138" -> "node104"  // carla-unreal-editor -> carla-client
+    "node126" [ label = "carla-python-api", shape = box ];
+    "node126" -> "node4"  // carla-python-api -> DetourCrowd
+    "node133" [ label = "carla-server", shape = octagon ];
+    "node133" -> "node4"  // carla-server -> DetourCrowd
+    "node134" [ label = "carla-unreal", shape = box ];
+    "node134" -> "node133"  // carla-unreal -> carla-server
+    "node138" [ label = "carla-unreal-editor", shape = box ];
+    "node138" -> "node133"  // carla-unreal-editor -> carla-server
+    "node5" [ label = "RecastBuilder", shape = egg ];
+    "node5" -> "node1" [ style = dotted ] // RecastBuilder -> Detour
+    "node104" [ label = "carla-client", shape = octagon ];
+    "node104" -> "node1"  // carla-client -> Detour
+    "node126" [ label = "carla-python-api", shape = box ];
+    "node126" -> "node1"  // carla-python-api -> Detour
+    "node133" [ label = "carla-server", shape = octagon ];
+    "node133" -> "node1"  // carla-server -> Detour
+}

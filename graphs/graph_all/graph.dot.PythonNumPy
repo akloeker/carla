@@ -1,0 +1,8 @@
+digraph "Python::NumPy" {
+node [
+  fontsize = "12"
+];
+    "node94" [ label = "Python::NumPy", shape = pentagon ];
+    "node95" [ label = "Python::Module", shape = pentagon ];
+    "node94" -> "node95" [ style = dashed ] // Python::NumPy -> Python::Module
+}

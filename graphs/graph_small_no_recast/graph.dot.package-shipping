@@ -1,0 +1,48 @@
+digraph "package-shipping" {
+node [
+  fontsize = "12"
+];
+    "node29" [ label = "package-shipping", shape = box ];
+    "node19" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node29" -> "node19"  // package-shipping -> carla-unreal-package-shipping
+    "node4" [ label = "carla-python-api", shape = box ];
+    "node19" -> "node4"  // carla-unreal-package-shipping -> carla-python-api
+    "node0" [ label = "carla-client", shape = octagon ];
+    "node4" -> "node0"  // carla-python-api -> carla-client
+    "node1" [ label = "rpc", shape = octagon ];
+    "node0" -> "node1"  // carla-client -> rpc
+    "node1" [ label = "rpc", shape = octagon ];
+    "node4" -> "node1"  // carla-python-api -> rpc
+    "node14" [ label = "carla-unreal-editor", shape = box ];
+    "node19" -> "node14"  // carla-unreal-package-shipping -> carla-unreal-editor
+    "node0" [ label = "carla-client", shape = octagon ];
+    "node14" -> "node0"  // carla-unreal-editor -> carla-client
+    "node11" [ label = "carla-server", shape = octagon ];
+    "node14" -> "node11"  // carla-unreal-editor -> carla-server
+    "node6" [ label = "carla-ros2-native", shape = box ];
+    "node11" -> "node6"  // carla-server -> carla-ros2-native
+    "node7" [ label = "carla-ros2-native-lib", shape = box ];
+    "node6" -> "node7"  // carla-ros2-native -> carla-ros2-native-lib
+    "node8" [ label = "fastdds", shape = box ];
+    "node7" -> "node8"  // carla-ros2-native-lib -> fastdds
+    "node9" [ label = "fastcdr", shape = box ];
+    "node8" -> "node9"  // fastdds -> fastcdr
+    "node10" [ label = "foonathan_memory", shape = box ];
+    "node8" -> "node10"  // fastdds -> foonathan_memory
+    "node1" [ label = "rpc", shape = octagon ];
+    "node11" -> "node1"  // carla-server -> rpc
+    "node12" [ label = "carla-unreal", shape = box ];
+    "node14" -> "node12"  // carla-unreal-editor -> carla-unreal
+    "node0" [ label = "carla-client", shape = octagon ];
+    "node12" -> "node0"  // carla-unreal -> carla-client
+    "node11" [ label = "carla-server", shape = octagon ];
+    "node12" -> "node11"  // carla-unreal -> carla-server
+    "node13" [ label = "carla-unreal-configure", shape = box ];
+    "node12" -> "node13"  // carla-unreal -> carla-unreal-configure
+    "node1" [ label = "rpc", shape = octagon ];
+    "node12" -> "node1"  // carla-unreal -> rpc
+    "node13" [ label = "carla-unreal-configure", shape = box ];
+    "node14" -> "node13"  // carla-unreal-editor -> carla-unreal-configure
+    "node1" [ label = "rpc", shape = octagon ];
+    "node14" -> "node1"  // carla-unreal-editor -> rpc
+}

@@ -1,0 +1,10 @@
+digraph "libsqlite3" {
+node [
+  fontsize = "12"
+];
+    "node137" [ label = "libsqlite3", shape = octagon ];
+    "node61" [ label = "Threads::Threads", shape = pentagon ];
+    "node137" -> "node61" [ style = dotted ] // libsqlite3 -> Threads::Threads
+    "node102" [ label = "dl", shape = septagon ];
+    "node137" -> "node102" [ style = dotted ] // libsqlite3 -> dl
+}

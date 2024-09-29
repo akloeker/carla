@@ -1,0 +1,26 @@
+digraph "boost_bind" {
+node [
+  fontsize = "12"
+];
+    "node16" [ label = "boost_bind\n(Boost::bind)", shape = pentagon ];
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node16" -> "node12" [ style = dashed ] // boost_bind -> boost_config
+    "node13" [ label = "boost_core\n(Boost::core)", shape = pentagon ];
+    "node16" -> "node13" [ style = dashed ] // boost_bind -> boost_core
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node13" -> "node11" [ style = dashed ] // boost_core -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node11" -> "node12" [ style = dashed ] // boost_assert -> boost_config
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node13" -> "node12" [ style = dashed ] // boost_core -> boost_config
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node13" -> "node14" [ style = dashed ] // boost_core -> boost_static_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node14" -> "node12" [ style = dashed ] // boost_static_assert -> boost_config
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node13" -> "node15" [ style = dashed ] // boost_core -> boost_throw_exception
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node15" -> "node11" [ style = dashed ] // boost_throw_exception -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node15" -> "node12" [ style = dashed ] // boost_throw_exception -> boost_config
+}

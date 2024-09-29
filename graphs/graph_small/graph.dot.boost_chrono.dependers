@@ -1,0 +1,8 @@
+digraph "boost_chrono" {
+node [
+  fontsize = "12"
+];
+    "node15" [ label = "boost_chrono\n(Boost::chrono)", shape = octagon ];
+    "node19" [ label = "boost_thread\n(Boost::thread)", shape = octagon ];
+    "node19" -> "node15"  // boost_thread -> boost_chrono
+}

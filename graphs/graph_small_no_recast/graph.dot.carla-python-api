@@ -1,0 +1,12 @@
+digraph "carla-python-api" {
+node [
+  fontsize = "12"
+];
+    "node4" [ label = "carla-python-api", shape = box ];
+    "node0" [ label = "carla-client", shape = octagon ];
+    "node4" -> "node0"  // carla-python-api -> carla-client
+    "node1" [ label = "rpc", shape = octagon ];
+    "node0" -> "node1"  // carla-client -> rpc
+    "node1" [ label = "rpc", shape = octagon ];
+    "node4" -> "node1"  // carla-python-api -> rpc
+}

@@ -1,0 +1,8 @@
+digraph "boost_polygon" {
+node [
+  fontsize = "12"
+];
+    "node75" [ label = "boost_polygon\n(Boost::polygon)", shape = pentagon ];
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node75" -> "node12" [ style = dashed ] // boost_polygon -> boost_config
+}

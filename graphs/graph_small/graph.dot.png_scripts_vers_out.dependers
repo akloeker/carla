@@ -1,0 +1,78 @@
+digraph "png_scripts_vers_out" {
+node [
+  fontsize = "12"
+];
+    "node33" [ label = "png_scripts_vers_out", shape = box ];
+    "node32" [ label = "png_genvers", shape = box ];
+    "node32" -> "node33"  // png_genvers -> png_scripts_vers_out
+    "node26" [ label = "png_genfiles", shape = box ];
+    "node26" -> "node32"  // png_genfiles -> png_genvers
+    "node25" [ label = "png_static", shape = octagon ];
+    "node25" -> "node26"  // png_static -> png_genfiles
+    "node24" [ label = "carla-client", shape = octagon ];
+    "node24" -> "node25"  // carla-client -> png_static
+    "node42" [ label = "carla-example-client", shape = egg ];
+    "node42" -> "node24" [ style = dotted ] // carla-example-client -> carla-client
+    "node44" [ label = "carla-python-api", shape = box ];
+    "node44" -> "node24"  // carla-python-api -> carla-client
+    "node45" [ label = "carla-python-api-install", shape = box ];
+    "node45" -> "node44"  // carla-python-api-install -> carla-python-api
+    "node56" [ label = "carla-unreal-package", shape = box ];
+    "node56" -> "node44"  // carla-unreal-package -> carla-python-api
+    "node69" [ label = "package", shape = box ];
+    "node69" -> "node56"  // package -> carla-unreal-package
+    "node57" [ label = "carla-unreal-package-debug", shape = box ];
+    "node57" -> "node44"  // carla-unreal-package-debug -> carla-python-api
+    "node70" [ label = "package-debug", shape = box ];
+    "node70" -> "node57"  // package-debug -> carla-unreal-package-debug
+    "node58" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node58" -> "node44"  // carla-unreal-package-debuggame -> carla-python-api
+    "node71" [ label = "package-debuggame", shape = box ];
+    "node71" -> "node58"  // package-debuggame -> carla-unreal-package-debuggame
+    "node59" [ label = "carla-unreal-package-development", shape = box ];
+    "node59" -> "node44"  // carla-unreal-package-development -> carla-python-api
+    "node72" [ label = "package-development", shape = box ];
+    "node72" -> "node59"  // package-development -> carla-unreal-package-development
+    "node60" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node60" -> "node44"  // carla-unreal-package-shipping -> carla-python-api
+    "node73" [ label = "package-shipping", shape = box ];
+    "node73" -> "node60"  // package-shipping -> carla-unreal-package-shipping
+    "node61" [ label = "carla-unreal-package-test", shape = box ];
+    "node61" -> "node44"  // carla-unreal-package-test -> carla-python-api
+    "node74" [ label = "package-test", shape = box ];
+    "node74" -> "node61"  // package-test -> carla-unreal-package-test
+    "node52" [ label = "carla-unreal", shape = box ];
+    "node52" -> "node24"  // carla-unreal -> carla-client
+    "node55" [ label = "carla-unreal-editor", shape = box ];
+    "node55" -> "node52"  // carla-unreal-editor -> carla-unreal
+    "node56" [ label = "carla-unreal-package", shape = box ];
+    "node56" -> "node55"  // carla-unreal-package -> carla-unreal-editor
+    "node57" [ label = "carla-unreal-package-debug", shape = box ];
+    "node57" -> "node55"  // carla-unreal-package-debug -> carla-unreal-editor
+    "node58" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node58" -> "node55"  // carla-unreal-package-debuggame -> carla-unreal-editor
+    "node59" [ label = "carla-unreal-package-development", shape = box ];
+    "node59" -> "node55"  // carla-unreal-package-development -> carla-unreal-editor
+    "node60" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node60" -> "node55"  // carla-unreal-package-shipping -> carla-unreal-editor
+    "node61" [ label = "carla-unreal-package-test", shape = box ];
+    "node61" -> "node55"  // carla-unreal-package-test -> carla-unreal-editor
+    "node67" [ label = "launch", shape = box ];
+    "node67" -> "node55"  // launch -> carla-unreal-editor
+    "node55" [ label = "carla-unreal-editor", shape = box ];
+    "node55" -> "node24"  // carla-unreal-editor -> carla-client
+    "node44" [ label = "carla-python-api", shape = box ];
+    "node44" -> "node25"  // carla-python-api -> png_static
+    "node51" [ label = "carla-server", shape = octagon ];
+    "node51" -> "node25"  // carla-server -> png_static
+    "node52" [ label = "carla-unreal", shape = box ];
+    "node52" -> "node51"  // carla-unreal -> carla-server
+    "node55" [ label = "carla-unreal-editor", shape = box ];
+    "node55" -> "node51"  // carla-unreal-editor -> carla-server
+    "node52" [ label = "carla-unreal", shape = box ];
+    "node52" -> "node25"  // carla-unreal -> png_static
+    "node55" [ label = "carla-unreal-editor", shape = box ];
+    "node55" -> "node25"  // carla-unreal-editor -> png_static
+    "node26" [ label = "png_genfiles", shape = box ];
+    "node26" -> "node33"  // png_genfiles -> png_scripts_vers_out
+}

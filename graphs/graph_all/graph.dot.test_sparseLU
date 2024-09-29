@@ -1,0 +1,8 @@
+digraph "test_sparseLU" {
+node [
+  fontsize = "12"
+];
+    "node163" [ label = "test_sparseLU", shape = egg ];
+    "node160" [ label = "/usr/lib/x86_64-linux-gnu/librt.a", shape = septagon ];
+    "node163" -> "node160" [ style = dotted ] // test_sparseLU -> /usr/lib/x86_64-linux-gnu/librt.a
+}

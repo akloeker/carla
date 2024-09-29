@@ -1,0 +1,18 @@
+digraph "png_scripts_vers_out" {
+node [
+  fontsize = "12"
+];
+    "node115" [ label = "png_scripts_vers_out", shape = box ];
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node115" -> "node111"  // png_scripts_vers_out -> pnglibconf_c
+    "node112" [ label = "pnglibconf_h", shape = box ];
+    "node115" -> "node112"  // png_scripts_vers_out -> pnglibconf_h
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node112" -> "node111"  // pnglibconf_h -> pnglibconf_c
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node112" -> "node113"  // pnglibconf_h -> pnglibconf_out
+    "node111" [ label = "pnglibconf_c", shape = box ];
+    "node113" -> "node111"  // pnglibconf_out -> pnglibconf_c
+    "node113" [ label = "pnglibconf_out", shape = box ];
+    "node115" -> "node113"  // png_scripts_vers_out -> pnglibconf_out
+}

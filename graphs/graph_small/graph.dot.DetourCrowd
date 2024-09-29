@@ -1,0 +1,8 @@
+digraph "DetourCrowd" {
+node [
+  fontsize = "12"
+];
+    "node4" [ label = "DetourCrowd\n(RecastNavigation::DetourCrowd)", shape = octagon ];
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node4" -> "node1"  // DetourCrowd -> Detour
+}

@@ -1,0 +1,18 @@
+digraph "png_scripts_intprefix_out" {
+node [
+  fontsize = "12"
+];
+    "node34" [ label = "png_scripts_intprefix_out", shape = box ];
+    "node29" [ label = "pnglibconf_c", shape = box ];
+    "node34" -> "node29"  // png_scripts_intprefix_out -> pnglibconf_c
+    "node30" [ label = "pnglibconf_h", shape = box ];
+    "node34" -> "node30"  // png_scripts_intprefix_out -> pnglibconf_h
+    "node29" [ label = "pnglibconf_c", shape = box ];
+    "node30" -> "node29"  // pnglibconf_h -> pnglibconf_c
+    "node31" [ label = "pnglibconf_out", shape = box ];
+    "node30" -> "node31"  // pnglibconf_h -> pnglibconf_out
+    "node29" [ label = "pnglibconf_c", shape = box ];
+    "node31" -> "node29"  // pnglibconf_out -> pnglibconf_c
+    "node31" [ label = "pnglibconf_out", shape = box ];
+    "node34" -> "node31"  // png_scripts_intprefix_out -> pnglibconf_out
+}

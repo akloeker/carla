@@ -1,0 +1,8 @@
+digraph "boost_move" {
+node [
+  fontsize = "12"
+];
+    "node22" [ label = "boost_move\n(Boost::move)", shape = pentagon ];
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node22" -> "node12" [ style = dashed ] // boost_move -> boost_config
+}

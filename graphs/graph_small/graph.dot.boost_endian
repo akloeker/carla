@@ -1,0 +1,8 @@
+digraph "boost_endian" {
+node [
+  fontsize = "12"
+];
+    "node67" [ label = "boost_endian\n(Boost::endian)", shape = pentagon ];
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node67" -> "node12" [ style = dashed ] // boost_endian -> boost_config
+}

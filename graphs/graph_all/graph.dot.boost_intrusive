@@ -1,0 +1,30 @@
+digraph "boost_intrusive" {
+node [
+  fontsize = "12"
+];
+    "node57" [ label = "boost_intrusive\n(Boost::intrusive)", shape = pentagon ];
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node57" -> "node11" [ style = dashed ] // boost_intrusive -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node11" -> "node12" [ style = dashed ] // boost_assert -> boost_config
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node57" -> "node12" [ style = dashed ] // boost_intrusive -> boost_config
+    "node33" [ label = "boost_container_hash\n(Boost::container_hash)", shape = pentagon ];
+    "node57" -> "node33" [ style = dashed ] // boost_intrusive -> boost_container_hash
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node33" -> "node12" [ style = dashed ] // boost_container_hash -> boost_config
+    "node34" [ label = "boost_describe\n(Boost::describe)", shape = pentagon ];
+    "node33" -> "node34" [ style = dashed ] // boost_container_hash -> boost_describe
+    "node35" [ label = "boost_mp11\n(Boost::mp11)", shape = pentagon ];
+    "node34" -> "node35" [ style = dashed ] // boost_describe -> boost_mp11
+    "node35" [ label = "boost_mp11\n(Boost::mp11)", shape = pentagon ];
+    "node33" -> "node35" [ style = dashed ] // boost_container_hash -> boost_mp11
+    "node22" [ label = "boost_move\n(Boost::move)", shape = pentagon ];
+    "node57" -> "node22" [ style = dashed ] // boost_intrusive -> boost_move
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node22" -> "node12" [ style = dashed ] // boost_move -> boost_config
+    "node14" [ label = "boost_static_assert\n(Boost::static_assert)", shape = pentagon ];
+    "node57" -> "node14" [ style = dashed ] // boost_intrusive -> boost_static_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node14" -> "node12" [ style = dashed ] // boost_static_assert -> boost_config
+}

@@ -1,0 +1,8 @@
+digraph "eigen_lapack" {
+node [
+  fontsize = "12"
+];
+    "node147" [ label = "eigen_lapack", shape = doubleoctagon ];
+    "node149" [ label = "lapack", shape = box ];
+    "node149" -> "node147"  // lapack -> eigen_lapack
+}

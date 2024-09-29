@@ -1,0 +1,80 @@
+digraph "Detour" {
+node [
+  fontsize = "12"
+];
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node0" [ label = "DebugUtils\n(RecastNavigation::DebugUtils)", shape = octagon ];
+    "node0" -> "node1"  // DebugUtils -> Detour
+    "node2" [ label = "DetourTileCache\n(RecastNavigation::DetourTileCache)", shape = octagon ];
+    "node2" -> "node1"  // DetourTileCache -> Detour
+    "node0" [ label = "DebugUtils\n(RecastNavigation::DebugUtils)", shape = octagon ];
+    "node0" -> "node2"  // DebugUtils -> DetourTileCache
+    "node3" [ label = "DetourCrowd\n(RecastNavigation::DetourCrowd)", shape = octagon ];
+    "node3" -> "node1"  // DetourCrowd -> Detour
+    "node4" [ label = "carla-client", shape = octagon ];
+    "node4" -> "node3"  // carla-client -> DetourCrowd
+    "node6" [ label = "carla-example-client", shape = egg ];
+    "node6" -> "node4" [ style = dotted ] // carla-example-client -> carla-client
+    "node8" [ label = "carla-python-api", shape = box ];
+    "node8" -> "node4"  // carla-python-api -> carla-client
+    "node9" [ label = "carla-python-api-install", shape = box ];
+    "node9" -> "node8"  // carla-python-api-install -> carla-python-api
+    "node19" [ label = "carla-unreal-package", shape = box ];
+    "node19" -> "node8"  // carla-unreal-package -> carla-python-api
+    "node29" [ label = "package", shape = box ];
+    "node29" -> "node19"  // package -> carla-unreal-package
+    "node20" [ label = "carla-unreal-package-debug", shape = box ];
+    "node20" -> "node8"  // carla-unreal-package-debug -> carla-python-api
+    "node30" [ label = "package-debug", shape = box ];
+    "node30" -> "node20"  // package-debug -> carla-unreal-package-debug
+    "node21" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node21" -> "node8"  // carla-unreal-package-debuggame -> carla-python-api
+    "node31" [ label = "package-debuggame", shape = box ];
+    "node31" -> "node21"  // package-debuggame -> carla-unreal-package-debuggame
+    "node22" [ label = "carla-unreal-package-development", shape = box ];
+    "node22" -> "node8"  // carla-unreal-package-development -> carla-python-api
+    "node32" [ label = "package-development", shape = box ];
+    "node32" -> "node22"  // package-development -> carla-unreal-package-development
+    "node23" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node23" -> "node8"  // carla-unreal-package-shipping -> carla-python-api
+    "node33" [ label = "package-shipping", shape = box ];
+    "node33" -> "node23"  // package-shipping -> carla-unreal-package-shipping
+    "node24" [ label = "carla-unreal-package-test", shape = box ];
+    "node24" -> "node8"  // carla-unreal-package-test -> carla-python-api
+    "node34" [ label = "package-test", shape = box ];
+    "node34" -> "node24"  // package-test -> carla-unreal-package-test
+    "node16" [ label = "carla-unreal", shape = box ];
+    "node16" -> "node4"  // carla-unreal -> carla-client
+    "node18" [ label = "carla-unreal-editor", shape = box ];
+    "node18" -> "node16"  // carla-unreal-editor -> carla-unreal
+    "node19" [ label = "carla-unreal-package", shape = box ];
+    "node19" -> "node18"  // carla-unreal-package -> carla-unreal-editor
+    "node20" [ label = "carla-unreal-package-debug", shape = box ];
+    "node20" -> "node18"  // carla-unreal-package-debug -> carla-unreal-editor
+    "node21" [ label = "carla-unreal-package-debuggame", shape = box ];
+    "node21" -> "node18"  // carla-unreal-package-debuggame -> carla-unreal-editor
+    "node22" [ label = "carla-unreal-package-development", shape = box ];
+    "node22" -> "node18"  // carla-unreal-package-development -> carla-unreal-editor
+    "node23" [ label = "carla-unreal-package-shipping", shape = box ];
+    "node23" -> "node18"  // carla-unreal-package-shipping -> carla-unreal-editor
+    "node24" [ label = "carla-unreal-package-test", shape = box ];
+    "node24" -> "node18"  // carla-unreal-package-test -> carla-unreal-editor
+    "node27" [ label = "launch", shape = box ];
+    "node27" -> "node18"  // launch -> carla-unreal-editor
+    "node18" [ label = "carla-unreal-editor", shape = box ];
+    "node18" -> "node4"  // carla-unreal-editor -> carla-client
+    "node8" [ label = "carla-python-api", shape = box ];
+    "node8" -> "node3"  // carla-python-api -> DetourCrowd
+    "node15" [ label = "carla-server", shape = octagon ];
+    "node15" -> "node3"  // carla-server -> DetourCrowd
+    "node16" [ label = "carla-unreal", shape = box ];
+    "node16" -> "node15"  // carla-unreal -> carla-server
+    "node18" [ label = "carla-unreal-editor", shape = box ];
+    "node18" -> "node15"  // carla-unreal-editor -> carla-server
+    "node4" [ label = "carla-client", shape = octagon ];
+    "node4" -> "node1"  // carla-client -> Detour
+    "node8" [ label = "carla-python-api", shape = box ];
+    "node8" -> "node1"  // carla-python-api -> Detour
+    "node15" [ label = "carla-server", shape = octagon ];
+    "node15" -> "node1"  // carla-server -> Detour
+}

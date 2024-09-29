@@ -1,0 +1,8 @@
+digraph "ICU::i18n" {
+node [
+  fontsize = "12"
+];
+    "node100" [ label = "ICU::i18n", shape = septagon ];
+    "node98" [ label = "boost_regex_icu\n(Boost::regex_icu)", shape = pentagon ];
+    "node98" -> "node100" [ style = dashed ] // boost_regex_icu -> ICU::i18n
+}

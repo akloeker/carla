@@ -1,0 +1,10 @@
+digraph "boost_winapi" {
+node [
+  fontsize = "12"
+];
+    "node50" [ label = "boost_winapi\n(Boost::winapi)", shape = pentagon ];
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node50" -> "node12" [ style = dashed ] // boost_winapi -> boost_config
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node50" -> "node29" [ style = dashed ] // boost_winapi -> boost_predef
+}

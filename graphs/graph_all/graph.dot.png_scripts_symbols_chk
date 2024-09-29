@@ -1,0 +1,8 @@
+digraph "png_scripts_symbols_chk" {
+node [
+  fontsize = "12"
+];
+    "node119" [ label = "png_scripts_symbols_chk", shape = box ];
+    "node120" [ label = "png_scripts_symbols_out", shape = box ];
+    "node119" -> "node120"  // png_scripts_symbols_chk -> png_scripts_symbols_out
+}

@@ -1,0 +1,10 @@
+digraph "boost_exception" {
+node [
+  fontsize = "12"
+];
+    "node9" [ label = "boost_exception\n(Boost::exception)", shape = octagon ];
+    "node11" [ label = "boost_coroutine\n(Boost::coroutine)", shape = octagon ];
+    "node11" -> "node9"  // boost_coroutine -> boost_exception
+    "node19" [ label = "boost_thread\n(Boost::thread)", shape = octagon ];
+    "node19" -> "node9"  // boost_thread -> boost_exception
+}

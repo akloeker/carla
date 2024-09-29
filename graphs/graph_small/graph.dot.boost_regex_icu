@@ -1,0 +1,20 @@
+digraph "boost_regex_icu" {
+node [
+  fontsize = "12"
+];
+    "node95" [ label = "boost_regex_icu\n(Boost::regex_icu)", shape = pentagon ];
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node95" -> "node11" [ style = dashed ] // boost_regex_icu -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node11" -> "node12" [ style = dashed ] // boost_assert -> boost_config
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node95" -> "node12" [ style = dashed ] // boost_regex_icu -> boost_config
+    "node29" [ label = "boost_predef\n(Boost::predef)", shape = pentagon ];
+    "node95" -> "node29" [ style = dashed ] // boost_regex_icu -> boost_predef
+    "node15" [ label = "boost_throw_exception\n(Boost::throw_exception)", shape = pentagon ];
+    "node95" -> "node15" [ style = dashed ] // boost_regex_icu -> boost_throw_exception
+    "node11" [ label = "boost_assert\n(Boost::assert)", shape = pentagon ];
+    "node15" -> "node11" [ style = dashed ] // boost_throw_exception -> boost_assert
+    "node12" [ label = "boost_config\n(Boost::config)", shape = pentagon ];
+    "node15" -> "node12" [ style = dashed ] // boost_throw_exception -> boost_config
+}

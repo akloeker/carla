@@ -1,0 +1,8 @@
+digraph "boost_filesystem" {
+node [
+  fontsize = "12"
+];
+    "node16" [ label = "boost_filesystem\n(Boost::filesystem)", shape = octagon ];
+    "node14" [ label = "boost_atomic\n(Boost::atomic)", shape = octagon ];
+    "node16" -> "node14" [ style = dotted ] // boost_filesystem -> boost_atomic
+}

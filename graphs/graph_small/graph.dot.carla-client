@@ -1,0 +1,16 @@
+digraph "carla-client" {
+node [
+  fontsize = "12"
+];
+    "node6" [ label = "carla-client", shape = octagon ];
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node6" -> "node1"  // carla-client -> Detour
+    "node4" [ label = "DetourCrowd\n(RecastNavigation::DetourCrowd)", shape = octagon ];
+    "node6" -> "node4"  // carla-client -> DetourCrowd
+    "node1" [ label = "Detour\n(RecastNavigation::Detour)", shape = octagon ];
+    "node4" -> "node1"  // DetourCrowd -> Detour
+    "node3" [ label = "Recast\n(RecastNavigation::Recast)", shape = octagon ];
+    "node6" -> "node3"  // carla-client -> Recast
+    "node7" [ label = "rpc", shape = octagon ];
+    "node6" -> "node7"  // carla-client -> rpc
+}

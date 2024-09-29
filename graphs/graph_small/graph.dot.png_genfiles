@@ -1,0 +1,66 @@
+digraph "png_genfiles" {
+node [
+  fontsize = "12"
+];
+    "node26" [ label = "png_genfiles", shape = box ];
+    "node27" [ label = "png_gensym", shape = box ];
+    "node26" -> "node27"  // png_genfiles -> png_gensym
+    "node28" [ label = "png_scripts_sym_out", shape = box ];
+    "node27" -> "node28"  // png_gensym -> png_scripts_sym_out
+    "node29" [ label = "pnglibconf_c", shape = box ];
+    "node28" -> "node29"  // png_scripts_sym_out -> pnglibconf_c
+    "node30" [ label = "pnglibconf_h", shape = box ];
+    "node28" -> "node30"  // png_scripts_sym_out -> pnglibconf_h
+    "node29" [ label = "pnglibconf_c", shape = box ];
+    "node30" -> "node29"  // pnglibconf_h -> pnglibconf_c
+    "node31" [ label = "pnglibconf_out", shape = box ];
+    "node30" -> "node31"  // pnglibconf_h -> pnglibconf_out
+    "node29" [ label = "pnglibconf_c", shape = box ];
+    "node31" -> "node29"  // pnglibconf_out -> pnglibconf_c
+    "node31" [ label = "pnglibconf_out", shape = box ];
+    "node28" -> "node31"  // png_scripts_sym_out -> pnglibconf_out
+    "node32" [ label = "png_genvers", shape = box ];
+    "node26" -> "node32"  // png_genfiles -> png_genvers
+    "node33" [ label = "png_scripts_vers_out", shape = box ];
+    "node32" -> "node33"  // png_genvers -> png_scripts_vers_out
+    "node29" [ label = "pnglibconf_c", shape = box ];
+    "node33" -> "node29"  // png_scripts_vers_out -> pnglibconf_c
+    "node30" [ label = "pnglibconf_h", shape = box ];
+    "node33" -> "node30"  // png_scripts_vers_out -> pnglibconf_h
+    "node31" [ label = "pnglibconf_out", shape = box ];
+    "node33" -> "node31"  // png_scripts_vers_out -> pnglibconf_out
+    "node34" [ label = "png_scripts_intprefix_out", shape = box ];
+    "node26" -> "node34"  // png_genfiles -> png_scripts_intprefix_out
+    "node29" [ label = "pnglibconf_c", shape = box ];
+    "node34" -> "node29"  // png_scripts_intprefix_out -> pnglibconf_c
+    "node30" [ label = "pnglibconf_h", shape = box ];
+    "node34" -> "node30"  // png_scripts_intprefix_out -> pnglibconf_h
+    "node31" [ label = "pnglibconf_out", shape = box ];
+    "node34" -> "node31"  // png_scripts_intprefix_out -> pnglibconf_out
+    "node35" [ label = "png_scripts_pnglibconf_c", shape = box ];
+    "node26" -> "node35"  // png_genfiles -> png_scripts_pnglibconf_c
+    "node36" [ label = "png_scripts_prefix_out", shape = box ];
+    "node26" -> "node36"  // png_genfiles -> png_scripts_prefix_out
+    "node29" [ label = "pnglibconf_c", shape = box ];
+    "node36" -> "node29"  // png_scripts_prefix_out -> pnglibconf_c
+    "node31" [ label = "pnglibconf_out", shape = box ];
+    "node36" -> "node31"  // png_scripts_prefix_out -> pnglibconf_out
+    "node28" [ label = "png_scripts_sym_out", shape = box ];
+    "node26" -> "node28"  // png_genfiles -> png_scripts_sym_out
+    "node37" [ label = "png_scripts_symbols_chk", shape = box ];
+    "node26" -> "node37"  // png_genfiles -> png_scripts_symbols_chk
+    "node38" [ label = "png_scripts_symbols_out", shape = box ];
+    "node37" -> "node38"  // png_scripts_symbols_chk -> png_scripts_symbols_out
+    "node38" [ label = "png_scripts_symbols_out", shape = box ];
+    "node26" -> "node38"  // png_genfiles -> png_scripts_symbols_out
+    "node33" [ label = "png_scripts_vers_out", shape = box ];
+    "node26" -> "node33"  // png_genfiles -> png_scripts_vers_out
+    "node29" [ label = "pnglibconf_c", shape = box ];
+    "node26" -> "node29"  // png_genfiles -> pnglibconf_c
+    "node30" [ label = "pnglibconf_h", shape = box ];
+    "node26" -> "node30"  // png_genfiles -> pnglibconf_h
+    "node31" [ label = "pnglibconf_out", shape = box ];
+    "node26" -> "node31"  // png_genfiles -> pnglibconf_out
+    "node39" [ label = "pngprefix_h", shape = box ];
+    "node26" -> "node39"  // png_genfiles -> pngprefix_h
+}
