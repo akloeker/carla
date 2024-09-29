@@ -72,5 +72,12 @@
         "CMAKE_BUILD_TYPE": "Release"
       }
     }
+  ],
+  "buildPresets": [
+    {
+      "name": "Linux-Release",
+      "configurePreset": "Linux-Release",
+      "targets": ["carla-unreal", "carla-python-api-install"]
+    }
   ]
 }
